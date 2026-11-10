@@ -13,7 +13,7 @@ export function whenLabel(e: EventDate, t: Dict) {
 }
 
 export function dateRange(e: EventDate, lang: Lang) {
-  const f = new Intl.DateTimeFormat(locale(lang), { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+  const f = new Intl.DateTimeFormat(locale(lang), { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC', calendar: 'gregory' });
   return e.start === e.end ? f.format(ymdToUtc(e.start)) : f.formatRange(ymdToUtc(e.start), ymdToUtc(e.end));
 }
 
@@ -44,7 +44,7 @@ export function EventItem({ e, lang, t, detailed }: { e: EventDate; lang: Lang; 
           {!!e.event.practices?.length && (
             <>
               <p className="pt-1 text-sm font-semibold uppercase tracking-wider text-noor">{t.practices}</p>
-              <ul className="list-disc space-y-1 pl-5">
+              <ul className="list-disc space-y-1 ps-5">
                 {e.event.practices.map((p) => <li key={p}>{p}</li>)}
               </ul>
             </>

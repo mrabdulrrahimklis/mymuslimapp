@@ -17,8 +17,9 @@ const cities = [...dart.matchAll(re)].map(([, id, name, country, lat, lng, nameB
 }));
 writeFileSync(join(out, 'cities.json'), JSON.stringify(cities, null, 1) + '\n');
 
-for (const lang of ['bs', 'en']) {
+const langs = ['bs', 'en', 'ar', 'tr', 'id', 'fa', 'ur'];
+for (const lang of langs) {
   const events = readFileSync(join(mobile, `assets/content/${lang}/events.json`), 'utf8');
   writeFileSync(join(out, `events.${lang}.json`), events);
 }
-console.log(`synced ${cities.length} cities and events (bs, en)`);
+console.log(`synced ${cities.length} cities and events (${langs.join(', ')})`);

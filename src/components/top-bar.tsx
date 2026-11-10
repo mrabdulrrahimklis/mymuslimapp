@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { chooseLang } from '@/app/actions';
-import { dict, type Lang } from '@/lib/i18n';
+import { dict, langs, languages, type Lang } from '@/lib/i18n';
 
 const NAV = [
   { href: '/', key: 'navTimes' },
@@ -29,20 +29,34 @@ export function TopBar({ lang, path }: { lang: Lang; path: string }) {
           </Link>
         ))}
       </nav>
-      <form action={chooseLang} className="flex rounded-full border border-line p-0.5 text-sm">
-        <input type="hidden" name="back" value={path} />
-        {(['bs', 'en'] as const).map((l) => (
-          <button
-            key={l}
-            name="lang"
-            value={l}
-            aria-pressed={l === lang}
-            className={`rounded-full px-3 py-1 uppercase ${l === lang ? 'bg-noor text-ink font-semibold' : 'text-mute hover:text-white'}`}
-          >
-            {l}
-          </button>
-        ))}
-      </form>
+      <details className="group relative">
+        <summary
+          aria-label={t.language}
+          className="flex items-center gap-2 rounded-full border border-line px-3 py-1.5 text-sm hover:border-noor"
+        >
+          <span aria-hidden>🌐</span> {languages[lang]} <span className="text-mute group-open:rotate-180">▾</span>
+        </summary>
+        <form
+          action={chooseLang}
+          className="absolute end-0 z-20 mt-2 w-52 overflow-hidden rounded-2xl border border-line bg-panel p-1 shadow-2xl"
+        >
+          <input type="hidden" name="back" value={path} />
+          {langs.map((l) => (
+            <button
+              key={l}
+              name="lang"
+              value={l}
+              lang={l}
+              aria-pressed={l === lang}
+              className={`block w-full rounded-xl px-3 py-2 text-start text-sm ${
+                l === lang ? 'bg-noor/15 text-noor' : 'hover:bg-white/10'
+              }`}
+            >
+              {languages[l]}
+            </button>
+          ))}
+        </form>
+      </details>
     </header>
   );
 }

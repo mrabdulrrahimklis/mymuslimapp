@@ -49,7 +49,7 @@ export function CityPicker({ cities, currentId, labels }: { cities: Option[]; cu
           <li key={c.id}>
             <button
               onClick={() => start(() => chooseCity(c.id))}
-              className={`w-full rounded-xl px-3 py-2.5 text-left hover:bg-white/10 ${
+              className={`w-full rounded-xl px-3 py-2.5 text-start hover:bg-white/10 ${
                 c.id === currentId ? 'bg-noor/15 text-noor' : ''
               }`}
             >

@@ -1,5 +1,10 @@
+import ar from '@/content/events.ar.json';
 import bs from '@/content/events.bs.json';
 import en from '@/content/events.en.json';
+import fa from '@/content/events.fa.json';
+import id from '@/content/events.id.json';
+import tr from '@/content/events.tr.json';
+import ur from '@/content/events.ur.json';
 import { addDays, daysBetween, type Ymd } from './dates';
 import { fromHijri, toHijri } from './hijri';
 import type { Lang } from './i18n';
@@ -28,7 +33,7 @@ export type EventDate = {
   daysUntil: number;
 };
 
-const byLang: Record<Lang, IslamicEvent[]> = { bs: bs as IslamicEvent[], en: en as IslamicEvent[] };
+const byLang = { bs, en, ar, tr, id, fa, ur } as Record<Lang, IslamicEvent[]>;
 
 /** Events still to come (or under way) from [today], soonest first, this Hijri year and next. */
 export function upcomingEvents(lang: Lang, today: Ymd): EventDate[] {

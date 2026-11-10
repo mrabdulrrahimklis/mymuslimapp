@@ -16,7 +16,7 @@ export default async function Home() {
   const ayah = await loadAyah(today, lang).catch(() => null);
   const city = place.cityId ? cityById(place.cityId)! : nearestCity(place.lat, place.lng);
   const dateText = new Intl.DateTimeFormat(locale(lang), {
-    weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
+    weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC', calendar: 'gregory',
   }).format(ymdToUtc(today));
 
   return (
@@ -26,9 +26,9 @@ export default async function Home() {
       <section className="mb-6 flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            {flag(city.country)} {place.nearby ? `${t.nearCity} ${place.label}` : place.label}
+            {flag(city.country)} {place.nearby ? t.near(place.label) : place.label}
           </h1>
-          <p className="mt-1 capitalize text-mute">{dateText}</p>
+          <p className="mt-1 text-mute first-letter:uppercase">{dateText}</p>
           {vaktija && (
             <p className="text-gold">
               {hijriLabel(lang, vaktija.today.hijri.day, vaktija.today.hijri.month, vaktija.today.hijri.year)}
@@ -61,7 +61,7 @@ export default async function Home() {
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">{t.ayahOfDay}</h2>
               <p dir="rtl" lang="ar" className="mt-4 font-arabic text-3xl leading-[2.1]">{ayah.arabic}</p>
               {ayah.translation && <p className="mt-4 text-lg leading-relaxed text-white/90">{ayah.translation}</p>}
-              <p className="mt-3 text-sm text-mute">Kur&apos;an {ayah.key}</p>
+              <p className="mt-3 text-sm text-mute">{t.quran} {ayah.key}</p>
             </section>
           )}
         </div>

@@ -24,8 +24,11 @@ export function dailyAyahKey(ymd: Ymd): string {
   throw new Error('unreachable');
 }
 
-/** quran.com translations, as in the app: Besim Korkut (bs), Saheeh International (en). */
-const translationId: Record<Lang, number> = { bs: 126, en: 20 };
+/**
+ * quran.com translations, as in the app: Besim Korkut (bs), Saheeh International (en),
+ * Diyanet (tr), Kemenag (id), IslamHouse (fa), Jalandhari (ur); none for Arabic.
+ */
+const translationId: Record<Lang, number | null> = { bs: 126, en: 20, ar: null, tr: 77, id: 33, fa: 135, ur: 234 };
 
 export type Ayah = { key: string; arabic: string; translation: string };
 
@@ -34,8 +37,9 @@ export const stripMarkup = (html: string) =>
 
 export async function loadAyah(ymd: Ymd, lang: Lang): Promise<Ayah> {
   const key = dailyAyahKey(ymd);
+  const tid = translationId[lang];
   const res = await fetch(
-    `https://api.quran.com/api/v4/verses/by_key/${key}?translations=${translationId[lang]}&fields=text_uthmani`,
+    `https://api.quran.com/api/v4/verses/by_key/${key}?fields=text_uthmani${tid ? `&translations=${tid}` : ''}`,
     { next: { revalidate: 60 * 60 * 24 * 7 } },
   );
   if (!res.ok) throw new Error(`quran.com ${res.status}`);

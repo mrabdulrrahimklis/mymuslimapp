@@ -39,7 +39,7 @@ export function PrayerBoard({
             {next.label} <span className="text-mute">·</span> {hm(next.iso)}
           </p>
           <p className="mt-2 font-mono text-4xl tabular-nums tracking-tight sm:text-5xl" suppressHydrationWarning>
-            <span className="mr-2 align-middle text-base font-sans text-mute">{inLabel}</span>
+            {inLabel && <span className="me-2 align-middle text-base font-sans text-mute">{inLabel}</span>}
             {countdown(Date.parse(next.iso) - now)}
           </p>
         </div>

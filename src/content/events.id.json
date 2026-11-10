@@ -1,0 +1,234 @@
+[
+  {
+    "id": "islamic_new_year",
+    "month": 1,
+    "day": 1,
+    "days": 1,
+    "kind": "day",
+    "title": "Tahun Baru Hijriah",
+    "summary": "Hari pertama bulan Muharam dan tahun Hijriah.",
+    "description": "Kalender Hijriah dihitung sejak hijrahnya Nabi ﷺ dari Makkah ke Madinah. Muharam adalah salah satu dari empat bulan haram (bulan suci), yang disebut oleh Nabi ﷺ sebagai \"bulan Allah\". Ini waktu yang baik untuk merenungkan tahun yang telah berlalu dan memperbarui niat.",
+    "practices": [
+      "Renungkan tahun yang telah berlalu dan bertobatlah dengan sungguh-sungguh.",
+      "Berdoalah agar tahun yang akan datang penuh berkah.",
+      "Berpuasa sunah pada hari-hari di bulan Muharam; Nabi ﷺ bersabda bahwa puasa paling utama setelah Ramadan adalah puasa di bulan Muharam.",
+      "Jauhi dosa, terutama pada bulan-bulan haram."
+    ],
+    "note": "Tidak ada salat atau ritual khusus yang ditetapkan untuk hari pertama tahun baru itu sendiri."
+  },
+  {
+    "id": "ashura",
+    "month": 1,
+    "day": 10,
+    "days": 1,
+    "kind": "fast",
+    "title": "Hari Asyura",
+    "summary": "Tanggal 10 Muharam, hari berpuasa.",
+    "description": "Asyura adalah hari ketika Allah menyelamatkan Nabi Musa dan Bani Israil dari Firaun. Nabi ﷺ berpuasa pada hari itu dan bersabda bahwa puasanya menghapus dosa-dosa kecil setahun sebelumnya. Pada hari ini pula cucu Nabi ﷺ, Sayyidina Husain, gugur sebagai syahid di Karbala pada tahun 61 H.",
+    "practices": [
+      "Berpuasalah pada tanggal 10 Muharam bersama tanggal 9 (atau tanggal 11).",
+      "Berlapang-lapanglah dalam memberi nafkah kepada keluarga pada hari ini, sebagaimana dianjurkan banyak ulama.",
+      "Perbanyak doa dan tobat."
+    ],
+    "note": "Menurut mazhab Hanafi, berpuasa hanya pada tanggal 10 saja hukumnya makruh ringan (makruh tanzihi), maka iringilah dengan puasa tanggal 9 atau 11."
+  },
+  {
+    "id": "mawlid",
+    "month": 3,
+    "day": 12,
+    "days": 1,
+    "kind": "day",
+    "title": "Maulid Nabi",
+    "summary": "Memperingati kelahiran Nabi Muhammad ﷺ.",
+    "description": "Nabi Muhammad ﷺ lahir di Makkah pada bulan Rabiul Awal, pada Tahun Gajah. Tanggal 12 adalah tanggal yang paling banyak diperingati. Banyak Muslim Sunni, termasuk banyak pengikut mazhab Hanafi, memperingati waktu ini dengan berkumpul untuk bersalawat kepada Nabi ﷺ, membaca dan mempelajari sirah (sejarah hidup) beliau, serta memberi makan orang lain.",
+    "practices": [
+      "Perbanyak salawat kepada Nabi ﷺ.",
+      "Baca atau dengarkan sirah beliau dan teladani akhlaknya.",
+      "Beri makan orang lain dan bersedekahlah.",
+      "Perbarui kecintaan Anda kepada Nabi ﷺ dan ikutilah Sunahnya."
+    ],
+    "note": "Banyak ulama dari masa ke masa memandang majelis zikir dalam rangka Maulid sebagai amalan terpuji selama bebas dari kemungkaran. Sebagian ulama berbeda pendapat dan tidak memperingatinya. Sesama Muslim hendaknya saling menghormati dalam masalah ini."
+  },
+  {
+    "id": "isra_miraj",
+    "month": 7,
+    "day": 27,
+    "days": 1,
+    "kind": "night",
+    "title": "Isra Mikraj",
+    "summary": "Perjalanan malam dan naiknya Nabi ﷺ ke langit.",
+    "description": "Dalam satu malam, Allah memperjalankan Nabi ﷺ dari Makkah ke Masjidil Aqsa di Yerusalem (Isra), tempat beliau mengimami para nabi dalam salat, lalu naik menembus langit (Mikraj). Dalam perjalanan inilah salat lima waktu diwajibkan. Peristiwa ini menjadi tanda kemuliaan Nabi ﷺ dan agungnya kedudukan salat.",
+    "practices": [
+      "Ingatlah anugerah salat lima waktu dan kerjakanlah dengan sungguh-sungguh.",
+      "Pelajari kisah Isra Mikraj.",
+      "Perbanyak doa, zikir dan salawat kepada Nabi ﷺ."
+    ],
+    "note": "Tanggal pastinya tidak ditetapkan secara kuat. Malam tanggal 27 Rajab adalah tanggal yang umum diperingati.",
+    "source": "QS. Al-Isra 17:1"
+  },
+  {
+    "id": "laylat_al_baraah",
+    "month": 8,
+    "day": 15,
+    "days": 1,
+    "kind": "night",
+    "title": "Malam Nisfu Syakban",
+    "summary": "Malam tanggal 15 Syakban (pertengahan Syakban).",
+    "description": "Ini adalah malam antara tanggal 14 dan 15 Syakban, yang juga dikenal sebagai Lailatul Bara'ah. Menurut riwayat-riwayat yang diterima banyak ulama, pada malam ini Allah memandang makhluk-Nya dan mengampuni banyak orang, kecuali orang yang menyekutukan-Nya atau yang menyimpan kebencian di hatinya. Banyak Muslim menghabiskan sebagian malam ini untuk beribadah.",
+    "practices": [
+      "Habiskan sebagian malam untuk salat sendiri-sendiri, membaca Al-Qur'an, zikir dan memohon ampunan.",
+      "Berdoalah untuk diri sendiri, keluarga dan kaum mukmin.",
+      "Sambung kembali silaturahmi yang terputus dan lepaskan rasa dendam.",
+      "Ziarahi kubur dan doakan orang-orang yang telah wafat, sebagaimana yang dilakukan Nabi ﷺ.",
+      "Berpuasa pada tanggal 15 Syakban dianjurkan oleh banyak ulama."
+    ],
+    "note": "Ibadah pada malam ini dilakukan sendiri-sendiri. Tidak ada jumlah rakaat tertentu atau bentuk salat khusus untuknya. Sebagian ulama mempertanyakan kekuatan riwayat-riwayatnya."
+  },
+  {
+    "id": "ramadan",
+    "month": 9,
+    "day": 1,
+    "days": 30,
+    "kind": "season",
+    "title": "Ramadan",
+    "summary": "Bulan puasa dimulai.",
+    "description": "Ramadan adalah bulan diturunkannya Al-Qur'an. Berpuasa di bulan ini adalah salah satu dari lima rukun Islam, dari terbit fajar hingga terbenam matahari, bagi setiap Muslim yang balig, berakal, sehat dan tidak sedang bepergian. Ramadan adalah bulan rahmat, ampunan dan kedekatan kepada Allah. Bulan ini berjumlah 29 atau 30 hari, tergantung pada bulan.",
+    "practices": [
+      "Berpuasalah setiap hari, dari terbit fajar sadik hingga terbenam matahari.",
+      "Makan sahur sebelum fajar; di dalamnya ada berkah.",
+      "Segerakan berbuka saat matahari terbenam, sebaiknya dengan kurma atau air.",
+      "Kerjakan salat tarawih setiap malam; menurut mazhab Hanafi tarawih berjumlah 20 rakaat dan hukumnya sunah muakkadah.",
+      "Baca dan renungkan Al-Qur'an; banyak orang berupaya mengkhatamkannya.",
+      "Bersedekahlah dengan dermawan dan berilah makan orang yang berpuasa.",
+      "Lakukan iktikaf di masjid pada sepuluh hari terakhir jika Anda mampu."
+    ],
+    "note": "Bulan ini dimulai dan diakhiri dengan terlihatnya hilal. Ikuti masjid setempat atau otoritas rukyatul hilal di daerah Anda.",
+    "source": "QS. Al-Baqarah 2:183-185"
+  },
+  {
+    "id": "laylat_al_qadr",
+    "month": 9,
+    "day": 27,
+    "days": 1,
+    "kind": "night",
+    "title": "Lailatul Qadar",
+    "summary": "Malam kemuliaan, lebih baik dari seribu bulan.",
+    "description": "Lailatul Qadar adalah malam ketika Al-Qur'an pertama kali diturunkan. Ibadah pada malam ini lebih baik daripada ibadah seribu bulan. Para malaikat turun, dan malam itu penuh kesejahteraan hingga terbit fajar. Siapa yang menghidupkannya dengan salat karena iman dan mengharap pahala, diampuni dosa-dosanya yang telah lalu.",
+    "practices": [
+      "Salat, membaca Al-Qur'an dan berzikir sepanjang malam.",
+      "Perbanyak doa ini: \"Allahumma innaka 'afuwwun tuhibbul-'afwa fa'fu 'anni\" (Ya Allah, sesungguhnya Engkau Maha Pemaaf dan menyukai pemaafan, maka maafkanlah aku).",
+      "Mohon ampunan dan berdoalah untuk segala yang Anda butuhkan.",
+      "Bersedekahlah."
+    ],
+    "note": "Malam pastinya dirahasiakan. Carilah pada malam-malam ganjil di sepuluh malam terakhir Ramadan (malam ke-21, 23, 25, 27, 29). Malam ke-27 banyak diyakini sebagai yang paling mungkin, dan diperingati di sini.",
+    "source": "QS. Al-Qadr 97"
+  },
+  {
+    "id": "eid_al_fitr",
+    "month": 10,
+    "day": 1,
+    "days": 1,
+    "kind": "eid",
+    "title": "Idulfitri",
+    "summary": "Hari raya yang menandai berakhirnya Ramadan.",
+    "description": "Idulfitri adalah hari kegembiraan dan syukur kepada Allah karena telah menyempurnakan puasa Ramadan. Umat Islam berkumpul untuk salat Id, mengeluarkan zakat agar orang miskin juga dapat merayakannya, serta mengunjungi keluarga dan sahabat. Berpuasa pada hari ini tidak diperbolehkan.",
+    "practices": [
+      "Tunaikan zakat fitrah sebelum salat Id. Menurut mazhab Hanafi hukumnya wajib bagi setiap Muslim yang memiliki nisab, dibayarkan untuk dirinya sendiri dan anak-anaknya yang masih kecil.",
+      "Mandi, kenakan pakaian terbaik dan pakailah wewangian.",
+      "Makan sesuatu yang manis, seperti kurma dalam jumlah ganjil, sebelum berangkat salat.",
+      "Ucapkan takbir dengan pelan dalam perjalanan menuju salat.",
+      "Kerjakan salat Id: dua rakaat dengan tiga takbir tambahan di setiap rakaat, diikuti khutbah.",
+      "Pulanglah melalui jalan yang berbeda jika memungkinkan.",
+      "Kunjungi keluarga, saling mengucapkan selamat, dan bermurah hatilah."
+    ],
+    "note": "Menurut mazhab Hanafi, salat Id hukumnya wajib bagi orang yang wajib salat Jumat. Zakat fitrah juga boleh dibayarkan selama bulan Ramadan, agar sampai kepada orang miskin tepat waktu."
+  },
+  {
+    "id": "six_days_shawwal",
+    "month": 10,
+    "day": 2,
+    "days": 6,
+    "kind": "fast",
+    "title": "Puasa enam hari Syawal",
+    "summary": "Berpuasa enam hari di bulan Syawal setelah Idulfitri.",
+    "description": "Nabi ﷺ bersabda bahwa siapa yang berpuasa Ramadan lalu mengiringinya dengan puasa enam hari di bulan Syawal, seakan-akan ia berpuasa setahun penuh. Puasa ini boleh dimulai sejak hari setelah Idulfitri.",
+    "practices": [
+      "Berpuasalah enam hari mana saja di bulan Syawal, setelah hari raya Idulfitri.",
+      "Boleh dikerjakan berturut-turut atau terpisah sepanjang bulan."
+    ],
+    "note": "Enam hari mana pun di bulan Syawal terhitung, baik berturut-turut maupun terpisah. Jangan berpuasa pada hari raya Idulfitri itu sendiri. Banyak ulama menganjurkan agar mengqada puasa Ramadan yang tertinggal terlebih dahulu, meskipun mazhab Hanafi membolehkan puasa enam hari ini dikerjakan sebelumnya."
+  },
+  {
+    "id": "day_of_arafah",
+    "month": 12,
+    "day": 9,
+    "days": 1,
+    "kind": "fast",
+    "title": "Hari Arafah",
+    "summary": "Hari paling agung dalam ibadah haji; hari berpuasa bagi yang tidak berhaji.",
+    "description": "Pada hari ini jemaah haji wukuf di padang Arafah sambil berdoa, yang merupakan inti ibadah haji. Tidak ada hari ketika Allah membebaskan lebih banyak orang dari neraka daripada hari ini. Bagi yang tidak berhaji, Nabi ﷺ bersabda bahwa puasa pada hari ini menghapus dosa-dosa kecil setahun yang lalu dan setahun yang akan datang.",
+    "practices": [
+      "Berpuasalah pada hari ini, jika Anda tidak sedang berhaji.",
+      "Perbanyak doa, terutama pada sore hari.",
+      "Perbanyak membaca: \"La ilaha illallahu wahdahu la syarika lah, lahul-mulku wa lahul-hamd, wa huwa 'ala kulli syai'in qadir.\"",
+      "Mulailah takbir tasyrik setelah salat fardu Subuh pada hari ini."
+    ],
+    "note": "Jemaah haji yang berada di Arafah dianjurkan untuk tidak berpuasa, agar memiliki tenaga untuk beribadah dan berdoa."
+  },
+  {
+    "id": "eid_al_adha",
+    "month": 12,
+    "day": 10,
+    "days": 1,
+    "kind": "eid",
+    "title": "Iduladha",
+    "summary": "Hari raya kurban.",
+    "description": "Iduladha mengenang kesediaan Nabi Ibrahim untuk mengorbankan putranya demi Allah, dan rahmat Allah yang menggantinya dengan sembelihan. Hari raya ini jatuh pada musim haji. Umat Islam mengerjakan salat Id dan menyembelih hewan kurban (udhiyah), lalu membagikan dagingnya kepada keluarga, sahabat dan orang miskin.",
+    "practices": [
+      "Mandi, kenakan pakaian terbaik dan pakailah wewangian.",
+      "Tunda makan hingga selesai salat Id, dan jika memungkinkan, makanlah pertama kali dari daging kurban Anda.",
+      "Kumandangkan takbir dengan suara keras dalam perjalanan menuju salat.",
+      "Kerjakan salat Id: dua rakaat dengan tiga takbir tambahan di setiap rakaat, diikuti khutbah.",
+      "Sembelihlah hewan kurban setelah salat Id. Penyembelihan boleh dilakukan pada tanggal 10, 11 atau 12, sebelum matahari terbenam pada tanggal 12.",
+      "Bagikan dagingnya: dianjurkan menyimpan sepertiga, memberikan sepertiga kepada kerabat dan sahabat, dan sepertiga kepada orang miskin.",
+      "Ucapkan takbir tasyrik setelah setiap salat fardu."
+    ],
+    "note": "Menurut mazhab Hanafi, kurban hukumnya wajib bagi setiap Muslim yang balig, berakal, bermukim dan memiliki nisab pada hari-hari penyembelihan. Menurut mazhab lain hukumnya sunah muakkadah."
+  },
+  {
+    "id": "days_of_tashriq",
+    "month": 12,
+    "day": 11,
+    "days": 3,
+    "kind": "day",
+    "title": "Hari Tasyrik",
+    "summary": "Tanggal 11, 12 dan 13 Zulhijah: hari-hari makan, minum dan berzikir kepada Allah.",
+    "description": "Nabi ﷺ menyebut hari-hari ini sebagai hari makan, minum dan berzikir kepada Allah. Jemaah haji bermalam di Mina dan melontar jumrah. Berpuasa pada hari-hari ini tidak diperbolehkan. Penyembelihan kurban masih boleh dilakukan pada tanggal 11 dan 12.",
+    "practices": [
+      "Ucapkan takbir tasyrik satu kali dengan suara keras setelah setiap salat fardu: \"Allahu akbar, Allahu akbar, la ilaha illallahu wallahu akbar, Allahu akbar wa lillahil-hamd\" (اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ، لَا إِلَٰهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، وَلِلَّهِ الْحَمْدُ).",
+      "Perbanyak mengingat Allah dan bersyukur atas nikmat-nikmat-Nya.",
+      "Nikmati hidangan bersama keluarga dan berbagilah dengan orang lain.",
+      "Jangan berpuasa pada hari-hari ini."
+    ],
+    "note": "Menurut mazhab Hanafi, takbir tasyrik hukumnya wajib setelah setiap salat fardu sejak Subuh tanggal 9 hingga Asar tanggal 13 (23 salat). Laki-laki mengucapkannya dengan suara keras; perempuan mengucapkannya dengan pelan.",
+    "source": "QS. Al-Baqarah 2:203"
+  },
+  {
+    "id": "first_ten_dhul_hijjah",
+    "month": 12,
+    "day": 1,
+    "days": 10,
+    "kind": "season",
+    "title": "Sepuluh hari pertama Zulhijah",
+    "summary": "Hari-hari terbaik sepanjang tahun untuk beramal saleh.",
+    "description": "Nabi ﷺ bersabda bahwa tidak ada hari-hari ketika amal saleh lebih dicintai Allah daripada sepuluh hari ini. Allah bersumpah dengannya dalam Al-Qur'an. Di dalamnya terdapat hari Arafah dan Iduladha, dan manasik haji dilaksanakan pada hari-hari ini.",
+    "practices": [
+      "Berpuasalah pada sembilan hari pertama, atau sebanyak yang Anda mampu, terutama pada hari Arafah.",
+      "Perbanyak tahlil, takbir dan tahmid: La ilaha illallah, Allahu akbar, Alhamdulillah.",
+      "Tingkatkan salat, bacaan Al-Qur'an, sedekah dan amal kebaikan.",
+      "Jika Anda berniat berkurban, dianjurkan untuk tidak memotong rambut dan kuku hingga hewan kurban Anda disembelih."
+    ],
+    "note": "Berpuasa pada tanggal 10 (hari raya Iduladha) tidak diperbolehkan.",
+    "source": "QS. Al-Fajr 89:1-2"
+  }
+]

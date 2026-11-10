@@ -7,7 +7,7 @@
   --color-mute: #8fb3a5;
   --color-noor: #34d399;
   --color-gold: #e7c873;
-  --font-sans: var(--font-manrope), system-ui, sans-serif;
+  --font-sans: var(--font-manrope), var(--font-vazir), system-ui, sans-serif;
   --font-arabic: var(--font-amiri), serif;
 }
 

@@ -58,3 +58,33 @@ describe('location', () => {
     expect(foldForSearch('Bihać Đakovo')).toBe('bihac djakovo');
   });
 });
+
+describe('languages', async () => {
+  const { dict, hijriLabel, langFromHeader, langs } = await import('./i18n');
+  it('has every language of the app with events', () => {
+    expect(langs).toEqual(['bs', 'en', 'ar', 'tr', 'id', 'fa', 'ur']);
+    for (const l of langs) {
+      expect(dict[l].prayers).toHaveLength(6);
+      expect(upcomingEvents(l, '2026-11-10').length).toBeGreaterThan(10);
+    }
+  });
+  it('picks the language from the browser', () => {
+    expect(langFromHeader('tr-TR,tr;q=0.9,en;q=0.8')).toBe('tr');
+    expect(langFromHeader('hr-HR,en;q=0.5')).toBe('bs');
+    expect(langFromHeader('de-DE,en;q=0.5')).toBe('en');
+    expect(langFromHeader(null)).toBe('bs');
+  });
+  it('names Hijri months in each language', () => {
+    expect(hijriLabel('bs', 15, 8, 1448)).toBe("15. ša'ban 1448. h.");
+    for (const l of ['ar', 'tr', 'id', 'fa', 'ur'] as const) {
+      expect(hijriLabel(l, 1, 9, 1448)).not.toMatch(/M09|undefined/);
+    }
+  });
+  it('uses Arabic plural rules', () => {
+    expect(dict.ar.inDays(1)).toBe('بعد يوم واحد');
+    expect(dict.ar.inDays(2)).toBe('بعد يومين');
+    expect(dict.ar.inDays(5)).toBe('بعد 5 أيام');
+    expect(dict.ar.inDays(11)).toBe('بعد 11 يومًا');
+    expect(dict.ar.inDays(100)).toBe('بعد 100 يوم');
+  });
+});

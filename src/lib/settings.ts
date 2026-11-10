@@ -1,6 +1,6 @@
-import { cookies } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 import { cityById, cityName, nearestCity } from './cities';
-import type { Lang } from './i18n';
+import { isLang, langFromHeader, type Lang } from './i18n';
 import { methodById, type Method } from './methods';
 
 export const COOKIE = { loc: 'pt_loc', lang: 'pt_lang', method: 'pt_method' } as const;
@@ -34,7 +34,8 @@ export function parsePlace(raw: string | undefined, lang: Lang): Place {
 
 export async function readSettings(): Promise<Settings> {
   const jar = await cookies();
-  const lang: Lang = jar.get(COOKIE.lang)?.value === 'en' ? 'en' : 'bs';
+  const saved = jar.get(COOKIE.lang)?.value;
+  const lang = isLang(saved) ? saved : langFromHeader((await headers()).get('accept-language'));
   return {
     lang,
     method: methodById(jar.get(COOKIE.method)?.value),

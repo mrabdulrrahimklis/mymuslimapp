@@ -3,6 +3,7 @@
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { cityById } from '@/lib/cities';
+import { isLang } from '@/lib/i18n';
 import { methods } from '@/lib/methods';
 import { COOKIE, COOKIE_OPTIONS } from '@/lib/settings';
 
@@ -30,8 +31,8 @@ export async function chooseMethod(formData: FormData) {
 }
 
 export async function chooseLang(formData: FormData) {
-  const lang = formData.get('lang') === 'en' ? 'en' : 'bs';
-  await save(COOKIE.lang, lang);
+  const lang = formData.get('lang');
+  if (isLang(lang)) await save(COOKIE.lang, lang);
   const back = String(formData.get('back') ?? '/');
   redirect(['/', '/location', '/events'].includes(back) ? back : '/');
 }

@@ -1,0 +1,234 @@
+[
+  {
+    "id": "islamic_new_year",
+    "month": 1,
+    "day": 1,
+    "days": 1,
+    "kind": "day",
+    "title": "Hicrî Yılbaşı",
+    "summary": "Muharrem ayının ve Hicrî yılın ilk günü.",
+    "description": "Hicrî takvim, Peygamber Efendimiz'in ﷺ Mekke'den Medine'ye hicretini başlangıç kabul eder. Muharrem, haram aylardan biridir ve Peygamberimiz ﷺ onu \"Allah'ın ayı\" diye anmıştır. Geçen yılı muhasebe etmek ve niyetleri tazelemek için güzel bir zamandır.",
+    "practices": [
+      "Geçen yılı muhasebe edin ve samimi bir tövbe edin.",
+      "Bereketli bir yıl için dua edin.",
+      "Muharrem ayında nafile oruç tutun; Peygamberimiz ﷺ Ramazan'dan sonra en faziletli orucun Muharrem orucu olduğunu bildirmiştir.",
+      "Özellikle haram aylarda günahlardan sakının."
+    ],
+    "note": "Yılın ilk günü için belirlenmiş özel bir namaz veya ibadet şekli yoktur."
+  },
+  {
+    "id": "ashura",
+    "month": 1,
+    "day": 10,
+    "days": 1,
+    "kind": "fast",
+    "title": "Aşure Günü",
+    "summary": "Muharrem'in 10. günü, oruç günü.",
+    "description": "Aşure, Allah'ın Hz. Mûsâ'yı ve İsrailoğullarını Firavun'dan kurtardığı gündür. Peygamberimiz ﷺ bu günde oruç tutmuş ve bu orucun bir önceki yılın küçük günahlarına kefaret olduğunu bildirmiştir. Aynı zamanda Peygamberimiz'in ﷺ torunu Hz. Hüseyin'in hicrî 61 yılında Kerbelâ'da şehit edildiği gündür.",
+    "practices": [
+      "Muharrem'in 10. gününü 9. (veya 11.) günüyle birlikte oruçlu geçirin.",
+      "Birçok âlimin tavsiye ettiği üzere bu gün ailenize bolca ikramda bulunun.",
+      "Dua ve tövbe edin."
+    ],
+    "note": "Hanefî mezhebinde yalnızca 10. günü oruçlu geçirmek tenzîhen mekruhtur; bu yüzden 9. veya 11. günle birleştirin."
+  },
+  {
+    "id": "mawlid",
+    "month": 3,
+    "day": 12,
+    "days": 1,
+    "kind": "day",
+    "title": "Mevlid Kandili",
+    "summary": "Peygamber Efendimiz Hz. Muhammed'in ﷺ doğumunun anılması.",
+    "description": "Peygamber Efendimiz Hz. Muhammed ﷺ, Fil Yılı'nda Rebîülevvel ayında Mekke'de dünyaya gelmiştir. En yaygın olarak ayın 12'si anılır. Hanefîler de dahil olmak üzere birçok Sünnî Müslüman bu vakti bir araya gelip Peygamberimiz'e ﷺ salât ü selâm getirerek, siyerini okuyup öğrenerek ve yemek ikram ederek değerlendirir.",
+    "practices": [
+      "Peygamberimiz'e ﷺ bolca salât ü selâm getirin.",
+      "Siyerini okuyun veya dinleyin ve güzel ahlâkından ders alın.",
+      "Yemek ikram edin ve sadaka verin.",
+      "Peygamberimiz'e ﷺ olan sevginizi tazeleyin ve Sünnet'ine uyun."
+    ],
+    "note": "Asırlar boyunca birçok âlim, günahtan arınmış Mevlid zikir meclislerini güzel kabul etmiştir. Bazı âlimler farklı görüşte olup bunu uygulamaz. Müslümanlar bu konuda birbirlerine saygıyla yaklaşmalıdır."
+  },
+  {
+    "id": "isra_miraj",
+    "month": 7,
+    "day": 27,
+    "days": 1,
+    "kind": "night",
+    "title": "Miraç Kandili",
+    "summary": "Peygamber Efendimiz'in ﷺ gece yolculuğu (İsrâ) ve göğe yükselişi (Mi'rac).",
+    "description": "Allah, bir gecede Peygamberimiz'i ﷺ Mekke'den Kudüs'teki Mescid-i Aksâ'ya götürmüş (İsrâ), orada peygamberlere namaz kıldırmış, ardından göklere yükseltmiştir (Mi'rac). Bu yolculukta beş vakit namaz farz kılınmıştır. Bu gece, Peygamberimiz'in ﷺ şerefinin ve namazın yüce değerinin bir işaretidir.",
+    "practices": [
+      "Beş vakit namaz hediyesini hatırlayın ve namazlarınızı özenle kılın.",
+      "İsrâ ve Mi'rac hadisesini öğrenin.",
+      "Dua ve zikir edin, Peygamberimiz'e ﷺ salât ü selâm getirin."
+    ],
+    "note": "Tarihi kesin olarak belirlenmiş değildir. Yaygın olarak Recep ayının 27. gecesi anılır.",
+    "source": "Kur'an 17:1"
+  },
+  {
+    "id": "laylat_al_baraah",
+    "month": 8,
+    "day": 15,
+    "days": 1,
+    "kind": "night",
+    "title": "Berat Kandili",
+    "summary": "Şaban ayının 15. gecesi (Şaban'ın ortası).",
+    "description": "Şaban'ın 14'ünü 15'ine bağlayan gecedir. Birçok âlimin kabul ettiği rivayetlere göre Allah bu gece kullarına rahmetle bakar ve Kendisine ortak koşanlar ile kalbinde kin besleyenler dışında pek çok kişiyi bağışlar. Birçok Müslüman bu gecenin bir kısmını ibadetle geçirir.",
+    "practices": [
+      "Gecenin bir kısmını tek başınıza namaz, Kur'an, zikir ve istiğfarla geçirin.",
+      "Kendiniz, aileniz ve müminler için dua edin.",
+      "Kırgınlıkları giderin ve kinlerinizi bırakın.",
+      "Peygamberimiz'in ﷺ yaptığı gibi kabristanı ziyaret edip ölüler için dua edin.",
+      "Birçok âlim Şaban'ın 15. gününü oruçlu geçirmeyi tavsiye eder."
+    ],
+    "note": "Bu gecedeki ibadet ferdî olarak yapılır. Belirli bir rekât sayısı veya özel bir namaz şekli yoktur. Bazı âlimler rivayetlerin sıhhatini tartışmalı bulur."
+  },
+  {
+    "id": "ramadan",
+    "month": 9,
+    "day": 1,
+    "days": 30,
+    "kind": "season",
+    "title": "Ramazan",
+    "summary": "Oruç ayı başlıyor.",
+    "description": "Ramazan, Kur'an'ın indirildiği aydır. Bu ayda imsaktan iftara kadar oruç tutmak İslam'ın beş şartından biridir ve ergen, akıllı, sağlıklı ve yolcu olmayan her Müslümana farzdır. Rahmet, mağfiret ve Allah'a yakınlık ayıdır. Ay, hilâle göre 29 veya 30 gün sürer.",
+    "practices": [
+      "Her gün fecr-i sâdıktan güneş batıncaya kadar oruç tutun.",
+      "İmsaktan önce sahura kalkın; sahurda bereket vardır.",
+      "Güneş batınca iftarı geciktirmeyin; mümkünse hurma veya su ile açın.",
+      "Her gece teravih namazı kılın; Hanefî mezhebinde 20 rekâttır ve müekked sünnettir.",
+      "Kur'an okuyun ve üzerinde tefekkür edin; birçok kişi hatim indirmeyi hedefler.",
+      "Cömertçe sadaka verin ve oruçlulara iftar ettirin.",
+      "İmkânınız varsa son on günde mescitte itikâfa girin."
+    ],
+    "note": "Ay, yeni hilâlin görülmesiyle başlar ve biter. Bulunduğunuz yerdeki caminin veya hilâl tespit kurumunun ilanını takip edin.",
+    "source": "Kur'an 2:183-185"
+  },
+  {
+    "id": "laylat_al_qadr",
+    "month": 9,
+    "day": 27,
+    "days": 1,
+    "kind": "night",
+    "title": "Kadir Gecesi",
+    "summary": "Bin aydan daha hayırlı olan Kadir Gecesi.",
+    "description": "Kadir Gecesi, Kur'an'ın indirilmeye başlandığı gecedir. Bu gecede yapılan ibadet bin ay boyunca yapılan ibadetten daha hayırlıdır. Melekler iner ve gece fecrin doğuşuna kadar esenliktir. Kim bu geceyi iman ederek ve sevabını umarak ibadetle geçirirse geçmiş günahları bağışlanır.",
+    "practices": [
+      "Geceyi namaz, Kur'an tilaveti ve zikirle geçirin.",
+      "Şu duayı sıkça okuyun: \"Allâhümme inneke afüvvün tühibbü'l-afve fa'fü annî\" (Allah'ım! Sen affedicisin, affetmeyi seversin; beni affet).",
+      "İstiğfar edin ve bütün ihtiyaçlarınız için dua edin.",
+      "Sadaka verin."
+    ],
+    "note": "Gecenin hangisi olduğu gizlenmiştir. Ramazan'ın son on gecesinin tek gecelerinde (21, 23, 25, 27, 29) arayın. 27. gecenin en kuvvetli ihtimal olduğu yaygın görüştür ve burada bu gece esas alınmıştır.",
+    "source": "Kur'an 97"
+  },
+  {
+    "id": "eid_al_fitr",
+    "month": 10,
+    "day": 1,
+    "days": 1,
+    "kind": "eid",
+    "title": "Ramazan Bayramı",
+    "summary": "Ramazan'ın sona erişini kutlayan bayram.",
+    "description": "Ramazan Bayramı, Ramazan orucunu tamamlamanın sevinci ve Allah'a şükür günüdür. Müslümanlar bayram namazı için bir araya gelir, yoksulların da bayram sevincine ortak olması için sadaka verir ve akraba ile dostlarını ziyaret eder. Bu günde oruç tutmak caiz değildir.",
+    "practices": [
+      "Fıtır sadakasını bayram namazından önce verin. Hanefî mezhebinde nisap miktarı mala sahip her Müslümana vâcibtir; kendisi ve küçük çocukları için ödenir.",
+      "Gusledin, en güzel elbisenizi giyin ve güzel koku sürünün.",
+      "Namaza gitmeden önce tek sayıda hurma gibi tatlı bir şey yiyin.",
+      "Namaza giderken gizlice tekbir getirin.",
+      "Bayram namazını kılın: her rekâtta üçer zevâid tekbiri bulunan iki rekât, ardından hutbe.",
+      "Mümkünse eve farklı bir yoldan dönün.",
+      "Akrabalarınızı ziyaret edin, bayramlaşın ve cömert olun."
+    ],
+    "note": "Hanefî mezhebinde bayram namazı, cuma namazı kendisine farz olanlara vâcibtir. Fıtır sadakası Ramazan içinde de verilebilir; böylece yoksullara vaktinde ulaşır."
+  },
+  {
+    "id": "six_days_shawwal",
+    "month": 10,
+    "day": 2,
+    "days": 6,
+    "kind": "fast",
+    "title": "Şevval Orucu (Altı Gün)",
+    "summary": "Bayramdan sonra Şevval ayında altı gün oruç tutmak.",
+    "description": "Peygamberimiz ﷺ, Ramazan orucunu tutup ardından Şevval'den altı gün oruç tutanın bütün yılı oruçlu geçirmiş gibi olacağını bildirmiştir. Bu oruçlara bayramın ertesi gününden itibaren başlanabilir.",
+    "practices": [
+      "Bayram gününden sonra Şevval ayında herhangi altı gün oruç tutun.",
+      "Bu oruçlar peş peşe veya ay içine dağıtılarak tutulabilir."
+    ],
+    "note": "Şevval'in herhangi altı günü, ister peş peşe ister ayrı ayrı olsun, geçerlidir. Bayram günü oruç tutmayın. Birçok âlim önce kaza edilecek Ramazan oruçlarının tutulmasını tavsiye eder; ancak Hanefî mezhebi altı gün orucunun bunlardan önce tutulmasına izin verir."
+  },
+  {
+    "id": "day_of_arafah",
+    "month": 12,
+    "day": 9,
+    "days": 1,
+    "kind": "fast",
+    "title": "Arefe Günü",
+    "summary": "Haccın en büyük günü; hacda olmayanlar için oruç günü.",
+    "description": "Bu günde hacılar Arafat'ta vakfeye durarak dua eder; bu, haccın özüdür. Allah'ın kullarını cehennemden en çok azat ettiği gün budur. Hacda olmayanlar için Peygamberimiz ﷺ bu günün orucunun bir önceki ve bir sonraki yılın küçük günahlarına kefaret olduğunu bildirmiştir.",
+    "practices": [
+      "Hacda değilseniz bu günü oruçlu geçirin.",
+      "Özellikle öğleden sonra bolca dua edin.",
+      "Sıkça şöyle deyin: \"Lâ ilâhe illallâhü vahdehû lâ şerîke leh, lehü'l-mülkü ve lehü'l-hamd, ve hüve alâ külli şey'in kadîr.\"",
+      "Bu günün sabah namazının farzından sonra teşrik tekbirlerine başlayın."
+    ],
+    "note": "Arafat'taki hacıların ibadet ve dua için güçlü kalmaları amacıyla oruç tutmamaları tavsiye edilir."
+  },
+  {
+    "id": "eid_al_adha",
+    "month": 12,
+    "day": 10,
+    "days": 1,
+    "kind": "eid",
+    "title": "Kurban Bayramı",
+    "summary": "Kurban ibadetinin yapıldığı bayram.",
+    "description": "Kurban Bayramı, Hz. İbrahim'in Allah için oğlunu kurban etmeye razı oluşunu ve Allah'ın rahmetiyle ona fidye olarak bir koç göndermesini anar. Hac mevsimine denk gelir. Müslümanlar bayram namazını kılar ve kurban keserek etini aile, dostlar ve yoksullarla paylaşır.",
+    "practices": [
+      "Gusledin, en güzel elbisenizi giyin ve güzel koku sürünün.",
+      "Bayram namazından sonraya kadar bir şey yemeyin; mümkünse ilk lokmayı kurbanınızın etinden yiyin.",
+      "Namaza giderken sesli olarak tekbir getirin.",
+      "Bayram namazını kılın: her rekâtta üçer zevâid tekbiri bulunan iki rekât, ardından hutbe.",
+      "Kurbanı bayram namazından sonra kesin. Kurban; bayramın 1., 2. veya 3. günü, 3. günün güneşi batmadan önce kesilebilir.",
+      "Etini paylaştırın: üçte birini kendinize ayırmanız, üçte birini akraba ve dostlara, üçte birini de yoksullara vermeniz müstehaptır.",
+      "Her farz namazdan sonra teşrik tekbiri getirin."
+    ],
+    "note": "Hanefî mezhebinde kurban, kurban günlerinde nisap miktarı mala sahip olan her ergen, akıllı ve mukim Müslümana vâcibtir. Diğer mezheplerde müekked sünnettir."
+  },
+  {
+    "id": "days_of_tashriq",
+    "month": 12,
+    "day": 11,
+    "days": 3,
+    "kind": "day",
+    "title": "Teşrik Günleri",
+    "summary": "Zilhicce'nin 11, 12 ve 13. günleri: yeme, içme ve Allah'ı anma günleri.",
+    "description": "Peygamberimiz ﷺ bu günleri yeme, içme ve Allah'ı anma günleri olarak nitelendirmiştir. Hacılar Mina'da kalır ve şeytan taşlar. Bu günlerde oruç tutmak caiz değildir. Kurban 11 ve 12. günlerde de kesilebilir.",
+    "practices": [
+      "Her farz namazdan sonra bir kez, sesli olarak teşrik tekbiri getirin: \"Allâhü ekber Allâhü ekber, lâ ilâhe illallâhü vallâhü ekber, Allâhü ekber ve lillâhi'l-hamd\" (اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ، لَا إِلَٰهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، وَلِلَّهِ الْحَمْدُ).",
+      "Allah'ı çokça anın ve nimetleri için O'na şükredin.",
+      "Ailenizle yemeğin tadını çıkarın ve başkalarıyla paylaşın.",
+      "Bu günlerde oruç tutmayın."
+    ],
+    "note": "Hanefî mezhebinde teşrik tekbirleri, Arefe günü (9. gün) sabah namazından bayramın 4. günü (13. gün) ikindi namazına kadar her farz namazdan sonra vâcibtir (23 vakit). Erkekler sesli, kadınlar gizli söyler.",
+    "source": "Kur'an 2:203"
+  },
+  {
+    "id": "first_ten_dhul_hijjah",
+    "month": 12,
+    "day": 1,
+    "days": 10,
+    "kind": "season",
+    "title": "Zilhicce'nin İlk On Günü",
+    "summary": "Salih ameller için yılın en faziletli günleri.",
+    "description": "Peygamberimiz ﷺ, içinde yapılan salih amellerin Allah katında bu on günden daha sevimli olduğu başka gün olmadığını bildirmiştir. Allah Kur'an'da bu günlere yemin etmiştir. Arefe günü ve Kurban Bayramı bu günlerdedir; hac menasiki de bu günlerde yerine getirilir.",
+    "practices": [
+      "İlk dokuz günü veya gücünüz yettiği kadarını, özellikle Arefe gününü oruçlu geçirin.",
+      "Bolca tehlil, tekbir ve tahmid getirin: Lâ ilâhe illallâh, Allâhü ekber, Elhamdülillâh.",
+      "Namazı, Kur'an tilavetini, sadakayı ve salih amelleri artırın.",
+      "Kurban kesmeyi niyet ediyorsanız, kurbanınızı kesinceye kadar saçınızı ve tırnaklarınızı kesmemeniz müstehaptır."
+    ],
+    "note": "10. günde (bayram günü) oruç tutmak caiz değildir.",
+    "source": "Kur'an 89:1-2"
+  }
+]
