@@ -1,11 +1,9 @@
 import Link from 'next/link';
 import { PrayerBoard } from '@/components/prayer-board';
-import { EventItem } from '@/components/event-item';
 import { TopBar } from '@/components/top-bar';
 import { loadAyah } from '@/lib/ayah';
 import { flag, cityById, nearestCity } from '@/lib/cities';
 import { todayIn, ymdToUtc } from '@/lib/dates';
-import { upcomingEvents } from '@/lib/events';
 import { dict, hijriLabel, locale } from '@/lib/i18n';
 import { loadVaktija, PRAYERS } from '@/lib/prayer-times';
 import { readSettings } from '@/lib/settings';
@@ -15,7 +13,7 @@ export default async function Home() {
   const t = dict[lang];
   const vaktija = await loadVaktija(place.lat, place.lng, method).catch(() => null);
   const today = vaktija?.today.date ?? todayIn('Europe/Sarajevo');
-  const [ayah, events] = [await loadAyah(today, lang).catch(() => null), upcomingEvents(lang, today).slice(0, 4)];
+  const ayah = await loadAyah(today, lang).catch(() => null);
   const city = place.cityId ? cityById(place.cityId)! : nearestCity(place.lat, place.lng);
   const dateText = new Intl.DateTimeFormat(locale(lang), {
     weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
@@ -57,7 +55,7 @@ export default async function Home() {
           )}
         </div>
 
-        <div className="space-y-8">
+        <div>
           {ayah && (
             <section className="rounded-3xl border border-gold/25 bg-gradient-to-b from-gold/10 to-transparent p-6">
               <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">{t.ayahOfDay}</h2>
@@ -66,16 +64,6 @@ export default async function Home() {
               <p className="mt-3 text-sm text-mute">Kur&apos;an {ayah.key}</p>
             </section>
           )}
-
-          <section>
-            <div className="mb-3 flex items-center justify-between">
-              <h2 className="text-xl font-semibold">{t.upcomingEvents}</h2>
-              <Link href="/events" className="text-sm text-noor hover:underline">{t.allEvents} →</Link>
-            </div>
-            <ul className="space-y-3">
-              {events.map((e) => <EventItem key={`${e.event.id}-${e.hijriYear}`} e={e} lang={lang} t={t} />)}
-            </ul>
-          </section>
         </div>
       </div>
     </>
