@@ -1,0 +1,234 @@
+[
+  {
+    "id": "islamic_new_year",
+    "month": 1,
+    "day": 1,
+    "days": 1,
+    "kind": "day",
+    "title": "Hidžretska nova godina",
+    "summary": "Prvi dan mjeseca muharrema i hidžretske godine.",
+    "description": "Hidžretski kalendar računa se od Poslanikove ﷺ hidžre (preseljenja) iz Mekke u Medinu. Muharrem je jedan od četiri sveta mjeseca, a Poslanik ﷺ ga je nazvao „Allahovim mjesecom“. To je lijepo vrijeme da se osvrneš na proteklu godinu i obnoviš svoje nijete.",
+    "practices": [
+      "Osvrni se na proteklu godinu i iskreno se pokaj.",
+      "Prouči dovu za berićetnu godinu koja dolazi.",
+      "Posti dobrovoljne dane u muharremu; Poslanik ﷺ je rekao da je najbolji post nakon ramazana post u muharremu.",
+      "Čuvaj se grijeha, posebno u svetim mjesecima."
+    ],
+    "note": "Za sam prvi dan godine nije propisan nikakav poseban namaz niti obred."
+  },
+  {
+    "id": "ashura",
+    "month": 1,
+    "day": 10,
+    "days": 1,
+    "kind": "fast",
+    "title": "Ašura",
+    "summary": "Deseti dan muharrema, dan posta.",
+    "description": "Ašura je dan kada je Allah spasio Musaa (Mojsija) i sinove Israilove od faraona. Poslanik ﷺ je postio ovaj dan i rekao da on briše male grijehe prethodne godine. To je i dan kada je Poslanikov ﷺ unuk, hazreti Husejn, poginuo kao šehid na Kerbeli 61. godine po Hidžri.",
+    "practices": [
+      "Posti deseti dan muharrema zajedno s devetim (ili jedanaestim).",
+      "Na ovaj dan budi darežljiv prema svojoj porodici, kako preporučuju mnogi učenjaci.",
+      "Uči dove i čini tevbu."
+    ],
+    "note": "U hanefijskom mezhebu postiti samo deseti dan je blago pokuđeno (mekruh tenzihen), pa ga spoji s devetim ili jedanaestim."
+  },
+  {
+    "id": "mawlid",
+    "month": 3,
+    "day": 12,
+    "days": 1,
+    "kind": "day",
+    "title": "Mevlud",
+    "summary": "Obilježavanje rođenja Poslanika Muhammeda ﷺ.",
+    "description": "Poslanik Muhammed ﷺ rođen je u Mekki u mjesecu rebiul-evvelu, u Godini slona. Dvanaesti dan je datum koji se najčešće obilježava. Mnogi sunnijski muslimani, uključujući mnoge hanefije, obilježavaju ovo vrijeme okupljanjem uz donošenje salavata na Poslanika ﷺ, učenje i izučavanje njegove sire (životopisa) i gošćenje drugih.",
+    "practices": [
+      "Donosi mnogo salavata na Poslanika ﷺ.",
+      "Čitaj ili slušaj o njegovom životu (siri) i uči od njegovog lijepog ahlaka.",
+      "Nahrani druge i udijeli sadaku.",
+      "Obnovi svoju ljubav prema Poslaniku ﷺ i slijedi njegov sunnet."
+    ],
+    "note": "Mnogi učenjaci kroz stoljeća smatrali su mevludska okupljanja i zikr pohvalnim kada su lišena svega nedozvoljenog. Neki učenjaci se s tim ne slažu i ne obilježavaju ga. Muslimani trebaju jedni prema drugima pokazivati poštovanje u ovom pitanju."
+  },
+  {
+    "id": "isra_miraj",
+    "month": 7,
+    "day": 27,
+    "days": 1,
+    "kind": "night",
+    "title": "Lejletul-isra' i mi'radž",
+    "summary": "Noćno putovanje i uzdignuće Poslanika ﷺ.",
+    "description": "U jednoj noći Allah je preveo Poslanika ﷺ iz Mekke do Mesdžidul-Aksaa u Kudsu (Jerusalemu) (isra'), gdje je predvodio vjerovjesnike u namazu, a zatim ga uzdigao kroz nebesa (mi'radž). Na ovom putovanju propisano je pet dnevnih namaza. To je znak Poslanikove ﷺ časti i velikog mjesta koje namaz ima.",
+    "practices": [
+      "Sjeti se dara pet dnevnih namaza i klanjaj ih s pažnjom.",
+      "Upoznaj priču o Noćnom putovanju.",
+      "Uči dove, čini zikr i donosi salavat na Poslanika ﷺ."
+    ],
+    "note": "Tačan datum nije pouzdano utvrđen. Najčešće se obilježava noć uoči 27. redžeba.",
+    "source": "Kur'an 17:1"
+  },
+  {
+    "id": "laylat_al_baraah",
+    "month": 8,
+    "day": 15,
+    "days": 1,
+    "kind": "night",
+    "title": "Lejletul-berat",
+    "summary": "Noć uoči 15. ša'bana (polovina ša'bana).",
+    "description": "Ovo je noć između 14. i 15. ša'bana. Prema predajama koje prihvataju mnogi učenjaci, Allah u ovoj noći pogleda na Svoja stvorenja i oprosti mnogim ljudima, osim onima koji Mu pripisuju druga i onima koji u srcu nose mržnju. Mnogi muslimani dio ove noći provedu u ibadetu.",
+    "practices": [
+      "Dio noći provedi u pojedinačnom namazu, učenju Kur'ana, zikru i traženju oprosta.",
+      "Prouči dovu za sebe, svoju porodicu i vjernike.",
+      "Popravi pokidane veze i oslobodi se zlobe.",
+      "Posjeti mezarje i prouči za umrle, kao što je činio Poslanik ﷺ.",
+      "Mnogi učenjaci preporučuju post 15. ša'bana."
+    ],
+    "note": "Ibadet u ovoj noći obavlja se pojedinačno. Za nju nije propisan određen broj rekata niti poseban oblik namaza. Neki učenjaci dovode u pitanje vjerodostojnost predaja."
+  },
+  {
+    "id": "ramadan",
+    "month": 9,
+    "day": 1,
+    "days": 30,
+    "kind": "season",
+    "title": "Ramazan",
+    "summary": "Počinje mjesec posta.",
+    "description": "Ramazan je mjesec u kojem je objavljen Kur'an. Post u njemu je jedan od pet temelja islama, od zore do zalaska sunca, za svakog punoljetnog, pametnog i zdravog muslimana koji nije na putu. To je mjesec milosti, oprosta i bliskosti s Allahom. Mjesec ima 29 ili 30 dana, zavisno od mjeseca na nebu.",
+    "practices": [
+      "Posti svaki dan, od zore do zalaska sunca.",
+      "Ustani na sehur prije zore; u njemu je bereket.",
+      "Iftari odmah po zalasku sunca, najbolje hurmom ili vodom.",
+      "Klanjaj teraviju svake noći; u hanefijskom mezhebu ima 20 rekata i sunnet muekkede je.",
+      "Uči Kur'an i razmišljaj o njemu; mnogi nastoje proučiti hatmu.",
+      "Daj obilno sadaku i nahrani one koji poste.",
+      "Ako možeš, provedi itikaf u džamiji tokom posljednjih deset dana."
+    ],
+    "note": "Mjesec počinje i završava viđenjem mlađaka. Slijedi svoju lokalnu džamiju ili nadležnu vjersku instituciju.",
+    "source": "Kur'an 2:183-185"
+  },
+  {
+    "id": "laylat_al_qadr",
+    "month": 9,
+    "day": 27,
+    "days": 1,
+    "kind": "night",
+    "title": "Lejletul-kadr",
+    "summary": "Noć Kadra, bolja od hiljadu mjeseci.",
+    "description": "Lejletul-kadr je noć u kojoj je počelo objavljivanje Kur'ana. Ibadet u ovoj noći bolji je od ibadeta hiljadu mjeseci. U njoj silaze meleki, i ona je mir sve do zore. Ko je provede u namazu s vjerom i nadom u nagradu, oprošteni su mu raniji grijesi.",
+    "practices": [
+      "Klanjaj, uči Kur'an i čini zikr tokom noći.",
+      "Često uči ovu dovu: „Allahumma innaka 'afuwwun tuhibbul-'afwa fa'fu 'anni“ (Allahu moj, Ti si Onaj Koji praštaš i voliš praštati, pa mi oprosti).",
+      "Traži oprost i moli za sve što ti je potrebno.",
+      "Udijeli sadaku."
+    ],
+    "note": "Tačna noć je skrivena. Traži je u neparnim noćima posljednjih deset noći ramazana (21., 23., 25., 27. i 29.). Za 27. noć se najčešće smatra da je najvjerovatnija, pa se ona ovdje obilježava.",
+    "source": "Kur'an 97"
+  },
+  {
+    "id": "eid_al_fitr",
+    "month": 10,
+    "day": 1,
+    "days": 1,
+    "kind": "eid",
+    "title": "Ramazanski bajram",
+    "summary": "Praznik kojim se završava ramazan.",
+    "description": "Ramazanski bajram je dan radosti i zahvale Allahu što smo upotpunili ramazanski post. Muslimani se okupljaju na bajram-namazu, daju sadaku kako bi i siromašni mogli proslaviti, te posjećuju porodicu i prijatelje. Postiti na ovaj dan nije dozvoljeno.",
+    "practices": [
+      "Podijeli sadekatul-fitr prije bajram-namaza. U hanefijskom mezhebu vadžib je na svakog muslimana koji posjeduje nisab, a daje se za sebe i svoju maloljetnu djecu.",
+      "Okupaj se, obuci svoju najljepšu odjeću i namiriši se.",
+      "Prije odlaska na namaz pojedi nešto slatko, na primjer neparan broj hurmi.",
+      "Na putu do namaza tiho uči tekbire.",
+      "Klanjaj bajram-namaz: dva rekata s tri dodatna tekbira u svakom rekatu, nakon čega slijedi hutba.",
+      "Ako možeš, vrati se kući drugim putem.",
+      "Posjeti porodicu, čestitajte jedni drugima i budi darežljiv."
+    ],
+    "note": "U hanefijskom mezhebu bajram-namaz je vadžib na one kojima je džuma obavezna. Sadekatul-fitr se može dati i tokom ramazana, kako bi na vrijeme stigao do siromašnih."
+  },
+  {
+    "id": "six_days_shawwal",
+    "month": 10,
+    "day": 2,
+    "days": 6,
+    "kind": "fast",
+    "title": "Šest dana ševvala",
+    "summary": "Posti šest dana ševvala nakon bajrama.",
+    "description": "Poslanik ﷺ je rekao da ko isposti ramazan, a zatim za njim šest dana ševvala, kao da je postio cijelu godinu. Ovaj post može početi od prvog dana nakon bajrama.",
+    "practices": [
+      "Posti bilo kojih šest dana u ševvalu, nakon dana bajrama.",
+      "Mogu se postiti uzastopno ili raspoređeno tokom mjeseca."
+    ],
+    "note": "Računa se bilo kojih šest dana ševvala, zajedno ili odvojeno. Ne posti se na sam dan bajrama. Mnogi učenjaci savjetuju da se prvo naposte propušteni ramazanski dani, iako hanefijski mezheb dozvoljava da se šest dana posti i prije njih."
+  },
+  {
+    "id": "day_of_arafah",
+    "month": 12,
+    "day": 9,
+    "days": 1,
+    "kind": "fast",
+    "title": "Dan Arefata",
+    "summary": "Najveći dan hadža; dan posta za one koji nisu na hadžu.",
+    "description": "Na ovaj dan hadžije stoje na Arefatu u dovi, što je srž hadža. Nema dana u kojem Allah više ljudi oslobodi od Vatre. Za one koji nisu na hadžu, Poslanik ﷺ je rekao da post ovog dana briše male grijehe prethodne i naredne godine.",
+    "practices": [
+      "Posti ovaj dan, ako nisi na hadžu.",
+      "Uči mnogo dova, posebno poslijepodne.",
+      "Često izgovaraj: „La ilaha illallahu wahdahu la sharika lah, lahul-mulku wa lahul-hamd, wa huwa 'ala kulli shay'in qadir.“",
+      "Počni s tekbirima tešrika nakon sabahskog farza ovog dana."
+    ],
+    "note": "Hadžijama na Arefatu savjetuje se da ne poste, kako bi imali snage za ibadet i dovu."
+  },
+  {
+    "id": "eid_al_adha",
+    "month": 12,
+    "day": 10,
+    "days": 1,
+    "kind": "eid",
+    "title": "Kurban-bajram",
+    "summary": "Praznik žrtvovanja.",
+    "description": "Kurban-bajram podsjeća na spremnost Ibrahima, a.s., da žrtvuje svog sina radi Allaha i na Allahovu milost kojom ga je otkupio. Pada u vrijeme hadža. Muslimani klanjaju bajram-namaz i kolju kurban, dijeleći meso s porodicom, prijateljima i siromašnima.",
+    "practices": [
+      "Okupaj se, obuci svoju najljepšu odjeću i namiriši se.",
+      "Ne jedi do poslije bajram-namaza, a ako možeš, prvo pojedi od svog kurbana.",
+      "Na putu do namaza naglas uči tekbire.",
+      "Klanjaj bajram-namaz: dva rekata s tri dodatna tekbira u svakom rekatu, nakon čega slijedi hutba.",
+      "Zakolji kurban nakon bajram-namaza. Može se klati 10., 11. ili 12. dana, prije zalaska sunca 12. dana.",
+      "Podijeli meso: preporučuje se trećinu zadržati, trećinu dati rodbini i prijateljima, a trećinu siromašnima.",
+      "Uči tekbire tešrika nakon svakog farz-namaza."
+    ],
+    "note": "U hanefijskom mezhebu kurban je vadžib na svakog punoljetnog, pametnog muslimana koji nije na putu i koji u danima kurbana posjeduje nisab. U drugim mezhebima to je jak sunnet."
+  },
+  {
+    "id": "days_of_tashriq",
+    "month": 12,
+    "day": 11,
+    "days": 3,
+    "kind": "day",
+    "title": "Dani tešrika",
+    "summary": "11., 12. i 13. zul-hidždže: dani jela, pića i spominjanja Allaha.",
+    "description": "Poslanik ﷺ je ove dane nazvao danima jela, pića i spominjanja Allaha. Hadžije borave na Mini i bacaju kamenčiće na džemrete. Postiti u ove dane nije dozvoljeno. Kurban se još može klati 11. i 12. dana.",
+    "practices": [
+      "Nakon svakog farz-namaza jednom, naglas, prouči tekbire tešrika: „Allahu akbar, Allahu akbar, la ilaha illallahu wallahu akbar, Allahu akbar wa lillahil-hamd“ (اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ، لَا إِلَٰهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، وَلِلَّهِ الْحَمْدُ).",
+      "Često spominji Allaha i zahvaljuj Mu na Njegovim blagodatima.",
+      "Uživaj u hrani s porodicom i podijeli s drugima.",
+      "Ne posti u ove dane."
+    ],
+    "note": "U hanefijskom mezhebu tekbiri tešrika su vadžib nakon svakog farz-namaza od sabaha 9. dana do ikindije 13. dana (23 namaza). Muškarci ih uče naglas, a žene u sebi.",
+    "source": "Kur'an 2:203"
+  },
+  {
+    "id": "first_ten_dhul_hijjah",
+    "month": 12,
+    "day": 1,
+    "days": 10,
+    "kind": "season",
+    "title": "Prvih deset dana zul-hidždže",
+    "summary": "Najbolji dani u godini za dobra djela.",
+    "description": "Poslanik ﷺ je rekao da nema dana u kojima su Allahu draža dobra djela od ovih deset dana. Allah se njima kune u Kur'anu. U njih spadaju Dan Arefata i Kurban-bajram, a u njima se obavljaju i obredi hadža.",
+    "practices": [
+      "Posti prvih devet dana, ili koliko možeš, a posebno Dan Arefata.",
+      "Mnogo uči tehlil, tekbir i tahmid: La ilahe illallah, Allahu ekber, Elhamdulillah.",
+      "Povećaj namaz, učenje Kur'ana, sadaku i dobra djela.",
+      "Ako namjeravaš klati kurban, preporučuje se da ne siječeš kosu i nokte dok ga ne zakolješ."
+    ],
+    "note": "Postiti 10. dana (bajram) nije dozvoljeno.",
+    "source": "Kur'an 89:1-2"
+  }
+]

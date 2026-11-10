@@ -1,0 +1,234 @@
+[
+  {
+    "id": "islamic_new_year",
+    "month": 1,
+    "day": 1,
+    "days": 1,
+    "kind": "day",
+    "title": "Islamic New Year",
+    "summary": "The first day of Muharram and of the Hijri year.",
+    "description": "The Hijri calendar counts from the Prophet's ﷺ migration (hijrah) from Makkah to Madinah. Muharram is one of the four sacred months, called by the Prophet ﷺ \"the month of Allah\". It is a good time to reflect on the past year and renew your intentions.",
+    "practices": [
+      "Reflect on the past year and make sincere repentance.",
+      "Make du'a for a blessed year ahead.",
+      "Fast voluntary days in Muharram; the Prophet ﷺ said the best fasting after Ramadan is in Muharram.",
+      "Avoid sins, especially in the sacred months."
+    ],
+    "note": "There is no special prayer or ritual set for the first day of the year itself."
+  },
+  {
+    "id": "ashura",
+    "month": 1,
+    "day": 10,
+    "days": 1,
+    "kind": "fast",
+    "title": "Day of Ashura",
+    "summary": "The 10th of Muharram, a day of fasting.",
+    "description": "Ashura is the day Allah saved Musa (Moses) and the Children of Israel from Pharaoh. The Prophet ﷺ fasted it and said it wipes away the minor sins of the previous year. It is also the day the Prophet's ﷺ grandson, Sayyiduna Husayn, was martyred at Karbala in 61 AH.",
+    "practices": [
+      "Fast the 10th of Muharram together with the 9th (or the 11th).",
+      "Spend generously on your family on this day, as many scholars recommend.",
+      "Make du'a and repentance."
+    ],
+    "note": "In the Hanafi school, fasting the 10th alone is mildly disliked (makruh tanzihi), so pair it with the 9th or 11th."
+  },
+  {
+    "id": "mawlid",
+    "month": 3,
+    "day": 12,
+    "days": 1,
+    "kind": "day",
+    "title": "Mawlid an-Nabi",
+    "summary": "Marking the birth of the Prophet Muhammad ﷺ.",
+    "description": "The Prophet Muhammad ﷺ was born in Makkah in Rabi' al-Awwal, in the Year of the Elephant. The 12th is the date most widely observed. Many Sunni Muslims, including many Hanafis, mark this time by gathering to send salawat on the Prophet ﷺ, recite and learn his sirah (life story), and feed others.",
+    "practices": [
+      "Send abundant salawat on the Prophet ﷺ.",
+      "Read or listen to his sirah and learn from his character.",
+      "Feed others and give charity.",
+      "Renew your love for the Prophet ﷺ and follow his Sunnah."
+    ],
+    "note": "Many scholars over the centuries have considered gatherings of remembrance for the Mawlid praiseworthy when free of wrongdoing. Some scholars differ and do not observe it. Muslims should treat each other with respect on this matter."
+  },
+  {
+    "id": "isra_miraj",
+    "month": 7,
+    "day": 27,
+    "days": 1,
+    "kind": "night",
+    "title": "Isra and Mi'raj",
+    "summary": "The Night Journey and Ascension of the Prophet ﷺ.",
+    "description": "In one night, Allah took the Prophet ﷺ from Makkah to al-Aqsa in Jerusalem (the Isra), where he led the prophets in prayer, and then up through the heavens (the Mi'raj). On this journey the five daily prayers were made obligatory. It is a sign of the Prophet's ﷺ honour and of the great place of prayer.",
+    "practices": [
+      "Remember the gift of the five daily prayers and pray them with care.",
+      "Learn the story of the Night Journey.",
+      "Make du'a, dhikr and send salawat on the Prophet ﷺ."
+    ],
+    "note": "The exact date is not firmly established. The night of the 27th of Rajab is the date commonly observed.",
+    "source": "Qur'an 17:1"
+  },
+  {
+    "id": "laylat_al_baraah",
+    "month": 8,
+    "day": 15,
+    "days": 1,
+    "kind": "night",
+    "title": "Laylat al-Bara'ah",
+    "summary": "The night of the 15th of Sha'ban (mid-Sha'ban).",
+    "description": "This is the night between the 14th and 15th of Sha'ban. According to narrations accepted by many scholars, Allah looks to His creation on this night and forgives many people, except those who associate partners with Him or hold hatred in their hearts. Many Muslims spend part of it in worship.",
+    "practices": [
+      "Spend part of the night in individual prayer, Qur'an, dhikr and seeking forgiveness.",
+      "Make du'a for yourself, your family and the believers.",
+      "Mend broken ties and let go of grudges.",
+      "Visit the graveyard and pray for the dead, as the Prophet ﷺ did.",
+      "Fasting on the 15th of Sha'ban is recommended by many scholars."
+    ],
+    "note": "Worship on this night is done individually. There is no fixed number of rak'ahs or special prayer form for it. Some scholars question the strength of the narrations."
+  },
+  {
+    "id": "ramadan",
+    "month": 9,
+    "day": 1,
+    "days": 30,
+    "kind": "season",
+    "title": "Ramadan",
+    "summary": "The month of fasting begins.",
+    "description": "Ramadan is the month in which the Qur'an was revealed. Fasting it is one of the five pillars of Islam, from dawn until sunset, for every adult, sane, healthy Muslim who is not travelling. It is a month of mercy, forgiveness and closeness to Allah. The month is 29 or 30 days, depending on the moon.",
+    "practices": [
+      "Fast every day, from true dawn until sunset.",
+      "Eat suhur before dawn; there is blessing in it.",
+      "Break the fast promptly at sunset, ideally with dates or water.",
+      "Pray tarawih each night; it is 20 rak'ahs in the Hanafi school and a sunnah muakkadah.",
+      "Read and reflect on the Qur'an; many aim to complete it.",
+      "Give generously in charity and feed those who are fasting.",
+      "Do i'tikaf in the masjid during the last ten days if you can."
+    ],
+    "note": "The month begins and ends with the sighting of the new moon. Follow your local masjid or moon-sighting authority.",
+    "source": "Qur'an 2:183-185"
+  },
+  {
+    "id": "laylat_al_qadr",
+    "month": 9,
+    "day": 27,
+    "days": 1,
+    "kind": "night",
+    "title": "Laylat al-Qadr",
+    "summary": "The Night of Power, better than a thousand months.",
+    "description": "Laylat al-Qadr is the night the Qur'an was first sent down. Worship on this night is better than worship for a thousand months. The angels descend, and it is peace until dawn. Whoever stands in prayer on it with faith and hope of reward is forgiven their past sins.",
+    "practices": [
+      "Pray, recite the Qur'an and make dhikr through the night.",
+      "Make this du'a often: \"Allahumma innaka 'afuwwun tuhibbul-'afwa fa'fu 'anni\" (O Allah, You are Pardoning and love to pardon, so pardon me).",
+      "Seek forgiveness and make du'a for everything you need.",
+      "Give charity."
+    ],
+    "note": "The exact night is hidden. Seek it in the odd nights of the last ten nights of Ramadan (21st, 23rd, 25th, 27th, 29th). The 27th night is widely held to be the most likely, and is observed here.",
+    "source": "Qur'an 97"
+  },
+  {
+    "id": "eid_al_fitr",
+    "month": 10,
+    "day": 1,
+    "days": 1,
+    "kind": "eid",
+    "title": "Eid al-Fitr",
+    "summary": "The festival marking the end of Ramadan.",
+    "description": "Eid al-Fitr is a day of joy and thanks to Allah for completing the fast of Ramadan. Muslims gather for the Eid prayer, give charity so that the poor can celebrate too, and visit family and friends. Fasting on this day is not allowed.",
+    "practices": [
+      "Give sadaqat al-fitr before the Eid prayer. It is wajib in the Hanafi school on every Muslim who owns the nisab, paid for themselves and their young children.",
+      "Do ghusl, wear your best clothes and use perfume.",
+      "Eat something sweet, such as an odd number of dates, before going to the prayer.",
+      "Say the takbir quietly on the way to the prayer.",
+      "Pray the Eid prayer: two rak'ahs with three extra takbirs in each rak'ah, followed by the khutbah.",
+      "Return home by a different route if you can.",
+      "Visit family, greet one another and be generous."
+    ],
+    "note": "In the Hanafi school, the Eid prayer is wajib on those for whom Jumu'ah is obligatory. Sadaqat al-fitr may also be paid during Ramadan, which allows it to reach the poor in time."
+  },
+  {
+    "id": "six_days_shawwal",
+    "month": 10,
+    "day": 2,
+    "days": 6,
+    "kind": "fast",
+    "title": "Six days of Shawwal",
+    "summary": "Fast six days of Shawwal after Eid.",
+    "description": "The Prophet ﷺ said that whoever fasts Ramadan and then follows it with six days of Shawwal, it is as if they fasted the whole year. These fasts can begin from the day after Eid.",
+    "practices": [
+      "Fast any six days in Shawwal, after the day of Eid.",
+      "They may be fasted in a row or spread across the month."
+    ],
+    "note": "Any six days of Shawwal count, together or separate. Do not fast on the day of Eid itself. Many scholars advise making up missed Ramadan fasts first, though the Hanafi school allows the six to be fasted before them."
+  },
+  {
+    "id": "day_of_arafah",
+    "month": 12,
+    "day": 9,
+    "days": 1,
+    "kind": "fast",
+    "title": "Day of Arafah",
+    "summary": "The greatest day of Hajj; a day of fasting for those not on Hajj.",
+    "description": "On this day the pilgrims stand on the plain of Arafah in du'a, which is the heart of Hajj. There is no day on which Allah frees more people from the Fire. For those not on Hajj, the Prophet ﷺ said fasting this day wipes away the minor sins of the previous year and the coming year.",
+    "practices": [
+      "Fast the day, if you are not on Hajj.",
+      "Make plenty of du'a, especially in the afternoon.",
+      "Say often: \"La ilaha illallahu wahdahu la sharika lah, lahul-mulku wa lahul-hamd, wa huwa 'ala kulli shay'in qadir.\"",
+      "Begin the takbir at-tashriq after the fard of Fajr on this day."
+    ],
+    "note": "Pilgrims at Arafah are advised not to fast, so they have strength for worship and du'a."
+  },
+  {
+    "id": "eid_al_adha",
+    "month": 12,
+    "day": 10,
+    "days": 1,
+    "kind": "eid",
+    "title": "Eid al-Adha",
+    "summary": "The festival of sacrifice.",
+    "description": "Eid al-Adha remembers the Prophet Ibrahim's willingness to sacrifice his son for Allah, and Allah's mercy in ransoming him. It falls during Hajj. Muslims pray the Eid prayer and offer a sacrifice (udhiyah or qurbani), sharing the meat with family, friends and the poor.",
+    "practices": [
+      "Do ghusl, wear your best clothes and use perfume.",
+      "Delay eating until after the Eid prayer, and if you can, eat first from your sacrifice.",
+      "Say the takbir aloud on the way to the prayer.",
+      "Pray the Eid prayer: two rak'ahs with three extra takbirs in each rak'ah, followed by the khutbah.",
+      "Offer the udhiyah after the Eid prayer. It may be done on the 10th, 11th or 12th, before sunset on the 12th.",
+      "Share the meat: it is recommended to keep a third, give a third to relatives and friends, and a third to the poor.",
+      "Say the takbir at-tashriq after every fard prayer."
+    ],
+    "note": "In the Hanafi school, the udhiyah is wajib on every adult, sane, resident Muslim who owns the nisab during the days of sacrifice. In other schools it is a strong sunnah."
+  },
+  {
+    "id": "days_of_tashriq",
+    "month": 12,
+    "day": 11,
+    "days": 3,
+    "kind": "day",
+    "title": "Days of Tashriq",
+    "summary": "The 11th, 12th and 13th of Dhul Hijjah: days of eating, drinking and remembering Allah.",
+    "description": "The Prophet ﷺ called these the days of eating, drinking and remembering Allah. Pilgrims stay at Mina and stone the pillars. Fasting on these days is not allowed. The sacrifice can still be offered on the 11th and 12th.",
+    "practices": [
+      "Say the takbir at-tashriq once, aloud, after every fard prayer: \"Allahu akbar, Allahu akbar, la ilaha illallahu wallahu akbar, Allahu akbar wa lillahil-hamd\" (اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ، لَا إِلَٰهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، وَلِلَّهِ الْحَمْدُ).",
+      "Remember Allah often and thank Him for His blessings.",
+      "Enjoy food with family and share with others.",
+      "Do not fast on these days."
+    ],
+    "note": "In the Hanafi school, the takbir at-tashriq is wajib after each fard prayer from Fajr on the 9th until Asr on the 13th (23 prayers). Men say it aloud; women say it quietly.",
+    "source": "Qur'an 2:203"
+  },
+  {
+    "id": "first_ten_dhul_hijjah",
+    "month": 12,
+    "day": 1,
+    "days": 10,
+    "kind": "season",
+    "title": "First ten days of Dhul Hijjah",
+    "summary": "The best days of the year for good deeds.",
+    "description": "The Prophet ﷺ said there are no days in which good deeds are more beloved to Allah than these ten days. Allah swears by them in the Qur'an. They include the Day of Arafah and Eid al-Adha, and the rites of Hajj take place in them.",
+    "practices": [
+      "Fast the first nine days, or as many as you can, especially the Day of Arafah.",
+      "Say plenty of tahlil, takbir and tahmid: La ilaha illallah, Allahu akbar, Alhamdulillah.",
+      "Increase in prayer, Qur'an, charity and good deeds.",
+      "If you plan to offer a sacrifice, it is recommended not to cut your hair or nails until you have sacrificed."
+    ],
+    "note": "Fasting on the 10th (Eid) is not allowed.",
+    "source": "Qur'an 89:1-2"
+  }
+]
