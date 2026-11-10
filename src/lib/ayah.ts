@@ -1,4 +1,5 @@
 import type { Ymd } from './dates';
+import { getAyahs } from './firestore';
 import type { Lang } from './i18n';
 
 /** Ayah counts of all 114 surahs (6236 in total). */
@@ -35,9 +36,22 @@ export type Ayah = { key: string; arabic: string; translation: string };
 export const stripMarkup = (html: string) =>
   html.replace(/<sup[^>]*>.*?<\/sup>/g, '').replace(/<[^>]+>/g, '').trim();
 
+/** The ayah from Firebase (Uthmani text and translation, per surah), or null. */
+async function fromFirebase(key: string, tid: number | null): Promise<Ayah | null> {
+  const [surah, ayah] = key.split(':').map(Number);
+  const [arabic, translation] = await Promise.all([
+    getAyahs(`content/quran/text/${surah}`),
+    tid ? getAyahs(`content/translations/items/${tid}/surahs/${surah}`) : Promise.resolve([]),
+  ]);
+  if (!arabic?.[ayah - 1] || !translation) return null;
+  return { key, arabic: arabic[ayah - 1], translation: translation[ayah - 1] ?? '' };
+}
+
 export async function loadAyah(ymd: Ymd, lang: Lang): Promise<Ayah> {
   const key = dailyAyahKey(ymd);
   const tid = translationId[lang];
+  const stored = await fromFirebase(key, tid);
+  if (stored) return stored;
   const res = await fetch(
     `https://api.quran.com/api/v4/verses/by_key/${key}?fields=text_uthmani${tid ? `&translations=${tid}` : ''}`,
     { next: { revalidate: 60 * 60 * 24 * 7 } },

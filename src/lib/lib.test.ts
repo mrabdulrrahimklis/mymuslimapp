@@ -88,3 +88,31 @@ describe('languages', async () => {
     expect(dict.ar.inDays(100)).toBe('بعد 100 يوم');
   });
 });
+
+describe('firebase content', async () => {
+  const { decode } = await import('./firestore');
+  const { parseHijri } = await import('./prayer-times');
+  const { zonedIso } = await import('./zoned');
+  it('decodes Firestore REST values', () => {
+    expect(
+      decode({
+        mapValue: {
+          fields: {
+            n: { integerValue: '3' },
+            list: { arrayValue: { values: [{ stringValue: 'a' }, { booleanValue: true }] } },
+            empty: { arrayValue: {} },
+          },
+        },
+      }),
+    ).toEqual({ n: 3, list: ['a', true], empty: [] });
+  });
+  it('reads Aladhan Hijri dates', () => {
+    expect(parseHijri('30 Jumādá al-ūlá 1448')).toEqual({ day: 30, month: 5, year: 1448 });
+    expect(parseHijri('1 Dhū al-Ḥijjah 1448')).toEqual({ day: 1, month: 12, year: 1448 });
+  });
+  it('gives local times their offset, across daylight saving', () => {
+    expect(zonedIso('2026-11-10', '05:29', 'Europe/Sarajevo')).toBe('2026-11-10T05:29:00+01:00');
+    expect(zonedIso('2026-07-10', '03:05', 'Europe/Sarajevo')).toBe('2026-07-10T03:05:00+02:00');
+    expect(zonedIso('2026-11-10', '06:10', 'America/New_York')).toBe('2026-11-10T06:10:00-05:00');
+  });
+});

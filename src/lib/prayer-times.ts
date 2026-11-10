@@ -1,5 +1,8 @@
+import { nearestCity } from './cities';
 import { addDays, todayIn, type Ymd } from './dates';
+import { getDoc } from './firestore';
 import type { Method } from './methods';
+import { zonedIso } from './zoned';
 
 export type PrayerKey = 'Fajr' | 'Sunrise' | 'Dhuhr' | 'Asr' | 'Maghrib' | 'Isha';
 export const PRAYERS: PrayerKey[] = ['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
@@ -43,7 +46,61 @@ function toDay(d: ApiDay): PrayerDay {
   };
 }
 
+// ── From Firebase: every bundled city × method × year, as the app stores it ──
+
+type StoredDay = { date: Ymd; times: Record<string, string>; hijri: string };
+type StoredYear = { timezone: string; cacheKey: string; days: StoredDay[] };
+
+/** Aladhan's transliterated Hijri month names, in order. */
+const ALADHAN_MONTHS = [
+  'Muḥarram', 'Ṣafar', 'Rabīʿ al-awwal', 'Rabīʿ al-thānī', 'Jumādá al-ūlá', 'Jumādá al-ākhirah',
+  'Rajab', 'Shaʿbān', 'Ramaḍān', 'Shawwāl', 'Dhū al-Qaʿdah', 'Dhū al-Ḥijjah',
+];
+
+/** "30 Jumādá al-ūlá 1448" → { day: 30, month: 5, year: 1448 } */
+export function parseHijri(text: string): PrayerDay['hijri'] {
+  const words = text.split(' ');
+  return {
+    day: Number(words[0]),
+    month: ALADHAN_MONTHS.indexOf(words.slice(1, -1).join(' ')) + 1,
+    year: Number(words.at(-1)),
+  };
+}
+
+/** Same tolerance as the app: ~0.1° ≈ 11 km from a bundled city. */
+const MAX_DRIFT = 0.1;
+
+async function fromFirebase(lat: number, lng: number, method: Method, now: Date): Promise<Vaktija | null> {
+  const city = nearestCity(lat, lng);
+  if (Math.abs(city.lat - lat) >= MAX_DRIFT || Math.abs(city.lng - lng) >= MAX_DRIFT) return null;
+  const years = new Map<number, Promise<StoredYear | null>>();
+  const year = (y: number) => {
+    if (!years.has(y)) years.set(y, getDoc<StoredYear>(`content/prayerTimes/cities/${city.id}/methods/${method.id}/years/${y}`));
+    return years.get(y)!;
+  };
+  const first = await year(now.getUTCFullYear());
+  if (!first) return null;
+  const today = todayIn(first.timezone, now);
+  const find = async (ymd: Ymd) => (await year(Number(ymd.slice(0, 4))))?.days.find((d) => d.date === ymd) ?? null;
+  const toDay = (d: StoredDay): PrayerDay => ({
+    date: d.date,
+    times: Object.fromEntries(
+      PRAYERS.map((p) => [p, zonedIso(d.date, d.times[p.toLowerCase()], first.timezone)]),
+    ) as PrayerDay['times'],
+    hijri: parseHijri(d.hijri),
+  });
+  const todayDay = await find(today);
+  if (!todayDay) return null;
+  const tomorrow = await find(addDays(today, 1));
+  return { timeZone: first.timezone, today: toDay(todayDay), tomorrow: tomorrow && toDay(tomorrow) };
+}
+
+/** Prayer times for today and tomorrow: Firebase for the app's cities, else Aladhan. */
 export async function loadVaktija(lat: number, lng: number, method: Method, now = new Date()): Promise<Vaktija> {
+  return (await fromFirebase(lat, lng, method, now)) ?? fromAladhan(lat, lng, method, now);
+}
+
+async function fromAladhan(lat: number, lng: number, method: Method, now: Date): Promise<Vaktija> {
   const months = new Map<string, PrayerDay[]>();
   let timeZone: string | undefined;
   const month = async (ymd: Ymd) => {

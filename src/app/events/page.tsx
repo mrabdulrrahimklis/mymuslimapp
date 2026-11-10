@@ -1,7 +1,7 @@
 import { EventItem } from '@/components/event-item';
 import { TopBar } from '@/components/top-bar';
 import { todayIn } from '@/lib/dates';
-import { upcomingEvents } from '@/lib/events';
+import { loadEvents, upcomingEvents } from '@/lib/events';
 import { dict } from '@/lib/i18n';
 import { readSettings } from '@/lib/settings';
 
@@ -11,7 +11,7 @@ export default async function EventsPage() {
   const today = todayIn('Europe/Sarajevo');
   // One year ahead: each event once.
   const seen = new Set<string>();
-  const events = upcomingEvents(lang, today).filter((e) => !seen.has(e.event.id) && seen.add(e.event.id));
+  const events = upcomingEvents(lang, today, await loadEvents(lang)).filter((e) => !seen.has(e.event.id) && seen.add(e.event.id));
   return (
     <>
       <TopBar lang={lang} path="/events" />
