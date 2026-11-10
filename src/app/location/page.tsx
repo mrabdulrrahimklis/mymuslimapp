@@ -14,16 +14,17 @@ export default async function LocationPage() {
   }));
   return (
     <>
-      <TopBar lang={lang} back={t.back} path="/location" />
+      <TopBar lang={lang} path="/location" />
       <h1 className="mb-5 text-3xl font-bold tracking-tight">{t.location}</h1>
+      <div className="grid items-start gap-8 lg:grid-cols-[2fr_1fr]">
       <CityPicker
         cities={options}
         currentId={place.cityId}
         labels={{ search: t.searchCity, useMine: t.useMyLocation, locating: t.locating, denied: t.locationDenied }}
       />
-      <form action={chooseMethod} className="mt-10 rounded-2xl border border-line bg-panel/70 p-4">
+      <form action={chooseMethod} className="rounded-2xl border border-line bg-panel/70 p-4">
         <label htmlFor="method" className="text-sm font-semibold text-mute">{t.method}</label>
-        <div className="mt-2 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-2 flex flex-col gap-3">
           <select
             id="method"
             name="method"
@@ -35,6 +36,7 @@ export default async function LocationPage() {
           <button className="rounded-xl bg-noor px-5 py-2.5 font-semibold text-ink">{t.save}</button>
         </div>
       </form>
+      </div>
     </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Amiri, Manrope } from 'next/font/google';
 import { readSettings } from '@/lib/settings';
 import { dict } from '@/lib/i18n';
+import { SiteFooter } from '@/components/site-footer';
 import './globals.css';
 
 const manrope = Manrope({ subsets: ['latin', 'latin-ext'], variable: '--font-manrope' });
@@ -20,7 +21,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang={lang} className={`${manrope.variable} ${amiri.variable}`}>
       <body className="font-sans antialiased">
-        <main className="mx-auto w-full max-w-3xl px-4 pb-16 pt-6 sm:px-6">{children}</main>
+        <div className="mx-auto w-full max-w-6xl px-4 pt-6 sm:px-8">
+          <main>{children}</main>
+          <SiteFooter lang={lang} />
+        </div>
       </body>
     </html>
   );

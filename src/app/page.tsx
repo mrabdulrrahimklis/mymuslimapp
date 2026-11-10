@@ -42,41 +42,42 @@ export default async function Home() {
         </Link>
       </section>
 
-      {vaktija ? (
-        <PrayerBoard
-          slots={PRAYERS.map((p, i) => ({ label: t.prayers[i], iso: vaktija.today.times[p] }))}
-          tomorrowFajr={vaktija.tomorrow && { label: t.prayers[0], iso: vaktija.tomorrow.times.Fajr }}
-          serverNow={Date.now()}
-          nextLabel={t.nextPrayer}
-          inLabel={t.in}
-        />
-      ) : (
-        <p className="rounded-2xl border border-red-400/30 bg-red-400/10 p-4">{t.unavailable}</p>
-      )}
-
-      {ayah && (
-        <section className="mt-8 rounded-3xl border border-gold/25 bg-gradient-to-b from-gold/10 to-transparent p-6">
-          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">{t.ayahOfDay}</h2>
-          <p dir="rtl" lang="ar" className="mt-4 font-arabic text-3xl leading-[2.1]">{ayah.arabic}</p>
-          {ayah.translation && <p className="mt-4 text-lg leading-relaxed text-white/90">{ayah.translation}</p>}
-          <p className="mt-3 text-sm text-mute">Kur&apos;an {ayah.key}</p>
-        </section>
-      )}
-
-      <section className="mt-8">
-        <div className="mb-3 flex items-center justify-between">
-          <h2 className="text-xl font-semibold">{t.upcomingEvents}</h2>
-          <Link href="/events" className="text-sm text-noor hover:underline">{t.allEvents} →</Link>
+      <div className="grid items-start gap-8 lg:grid-cols-[1.1fr_1fr]">
+        <div className="lg:sticky lg:top-6">
+          {vaktija ? (
+            <PrayerBoard
+              slots={PRAYERS.map((p, i) => ({ label: t.prayers[i], iso: vaktija.today.times[p] }))}
+              tomorrowFajr={vaktija.tomorrow && { label: t.prayers[0], iso: vaktija.tomorrow.times.Fajr }}
+              serverNow={Date.now()}
+              nextLabel={t.nextPrayer}
+              inLabel={t.in}
+            />
+          ) : (
+            <p className="rounded-2xl border border-red-400/30 bg-red-400/10 p-4">{t.unavailable}</p>
+          )}
         </div>
-        <ul className="space-y-3">
-          {events.map((e) => <EventItem key={`${e.event.id}-${e.hijriYear}`} e={e} lang={lang} t={t} />)}
-        </ul>
-      </section>
 
-      <footer className="mt-12 space-y-1 text-center text-xs text-mute">
-        <p>{t.savedInCookie}</p>
-        <p>{t.sourceNote}</p>
-      </footer>
+        <div className="space-y-8">
+          {ayah && (
+            <section className="rounded-3xl border border-gold/25 bg-gradient-to-b from-gold/10 to-transparent p-6">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">{t.ayahOfDay}</h2>
+              <p dir="rtl" lang="ar" className="mt-4 font-arabic text-3xl leading-[2.1]">{ayah.arabic}</p>
+              {ayah.translation && <p className="mt-4 text-lg leading-relaxed text-white/90">{ayah.translation}</p>}
+              <p className="mt-3 text-sm text-mute">Kur&apos;an {ayah.key}</p>
+            </section>
+          )}
+
+          <section>
+            <div className="mb-3 flex items-center justify-between">
+              <h2 className="text-xl font-semibold">{t.upcomingEvents}</h2>
+              <Link href="/events" className="text-sm text-noor hover:underline">{t.allEvents} →</Link>
+            </div>
+            <ul className="space-y-3">
+              {events.map((e) => <EventItem key={`${e.event.id}-${e.hijriYear}`} e={e} lang={lang} t={t} />)}
+            </ul>
+          </section>
+        </div>
+      </div>
     </>
   );
 }

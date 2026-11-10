@@ -44,7 +44,7 @@ export function CityPicker({ cities, currentId, labels }: { cities: Option[]; cu
         placeholder={labels.search}
         className="mt-2 w-full rounded-2xl border border-line bg-panel px-4 py-3 outline-none focus:border-noor"
       />
-      <ul className="mt-3 grid max-h-[55vh] grid-cols-1 gap-1 overflow-y-auto sm:grid-cols-2">
+      <ul className="mt-3 grid max-h-[60vh] grid-cols-1 gap-1 overflow-y-auto sm:grid-cols-2 lg:grid-cols-3">
         {shown.map((c) => (
           <li key={c.id}>
             <button

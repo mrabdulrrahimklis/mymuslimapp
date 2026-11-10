@@ -3,6 +3,15 @@ export const langs: Lang[] = ['bs', 'en'];
 
 const bs = {
   title: 'Vaktija',
+  navTimes: 'Vaktija',
+  footerPages: 'Stranice',
+  footerApp: 'Mobilna aplikacija',
+  footerAppNote: 'Kur\'an, kibla, zikr i obavijesti za namaz, sve offline.',
+  footerHelp: 'Podrška',
+  support: 'Pomoć',
+  privacy: 'Politika privatnosti',
+  contact: 'Kontakt',
+  prayerTimes: 'Namaska vremena',
   tagline: 'Vaktija, ajet dana i islamski događaji',
   prayers: ['Zora', 'Izlazak sunca', 'Podne', 'Ikindija', 'Akšam', 'Jacija'],
   nextPrayer: 'Sljedeće',
@@ -35,6 +44,15 @@ const bs = {
 
 const en: typeof bs = {
   title: 'Prayer Times',
+  navTimes: 'Prayer times',
+  footerPages: 'Pages',
+  footerApp: 'Mobile app',
+  footerAppNote: 'Qur\'an, Qibla, zikr and prayer alerts, all offline.',
+  footerHelp: 'Help',
+  support: 'Support',
+  privacy: 'Privacy policy',
+  contact: 'Contact',
+  prayerTimes: 'Prayer times',
   tagline: 'Prayer times, ayah of the day and Islamic events',
   prayers: ['Fajr', 'Sunrise', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'],
   nextPrayer: 'Next',

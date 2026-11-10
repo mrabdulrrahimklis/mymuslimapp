@@ -14,9 +14,9 @@ export default async function EventsPage() {
   const events = upcomingEvents(lang, today).filter((e) => !seen.has(e.event.id) && seen.add(e.event.id));
   return (
     <>
-      <TopBar lang={lang} back={t.back} path="/events" />
+      <TopBar lang={lang} path="/events" />
       <h1 className="mb-5 text-3xl font-bold tracking-tight">{t.events}</h1>
-      <ul className="space-y-3">
+      <ul className="grid items-start gap-3 lg:grid-cols-2">
         {events.map((e) => <EventItem key={`${e.event.id}-${e.hijriYear}`} e={e} lang={lang} t={t} detailed />)}
       </ul>
     </>
