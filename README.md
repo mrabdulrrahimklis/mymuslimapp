@@ -1,6 +1,6 @@
-# Pray Tool — Web
+# Muslim App — Web
 
-Web version of the Pray Tool app: prayer times (vaktija), ayah of the day and
+Web version of Muslim App (the `pray-tool` Flutter app): prayer times (vaktija), ayah of the day and
 upcoming Islamic events. Next.js (App Router), no database. The mobile app is
 not changed.
 

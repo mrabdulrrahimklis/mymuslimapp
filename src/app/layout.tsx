@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Amiri, Manrope, Vazirmatn } from 'next/font/google';
 import { readSettings } from '@/lib/settings';
-import { dict, isRtl } from '@/lib/i18n';
+import { APP_NAME, dict, isRtl } from '@/lib/i18n';
 import { SiteFooter } from '@/components/site-footer';
 import './globals.css';
 
@@ -12,7 +12,7 @@ const amiri = Amiri({ subsets: ['arabic'], weight: ['400', '700'], variable: '--
 export async function generateMetadata(): Promise<Metadata> {
   const { lang } = await readSettings();
   const t = dict[lang];
-  return { title: `${t.title} · Pray Tool`, description: t.tagline };
+  return { title: `${t.title} · ${APP_NAME}`, description: t.tagline, applicationName: APP_NAME };
 }
 
 export const viewport: Viewport = { themeColor: '#06110d' };

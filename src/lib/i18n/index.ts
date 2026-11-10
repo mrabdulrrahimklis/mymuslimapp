@@ -10,6 +10,9 @@ import { fromHijri } from '../hijri';
 
 export type { Dict } from './types';
 
+/** The app's name in every language, as in the mobile app (`appName`). */
+export const APP_NAME = 'Muslim App';
+
 /** The mobile app's languages, each named in its own language. */
 export const languages = {
   bs: 'Bosanski',

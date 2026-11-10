@@ -1,5 +1,6 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { dict, type Lang } from '@/lib/i18n';
+import { APP_NAME, dict, type Lang } from '@/lib/i18n';
 
 const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.amygdal.pray_tool';
 const SUPPORT_URL = 'https://pray-tool.web.app/';
@@ -16,8 +17,8 @@ export function SiteFooter({ lang }: { lang: Lang }) {
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <p className="flex items-center gap-2 text-base font-semibold">
-            <span className="grid size-7 place-items-center rounded-full bg-noor/15 text-noor">☾</span>
-            Pray Tool
+            <Image src="/logo.png" alt="" width={28} height={28} className="rounded-lg" />
+            {APP_NAME}
           </p>
           <p className="mt-2 text-mute">{t.tagline}</p>
         </div>

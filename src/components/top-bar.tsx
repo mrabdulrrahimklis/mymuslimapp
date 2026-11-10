@@ -1,6 +1,7 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { chooseLang } from '@/app/actions';
-import { dict, langs, languages, type Lang } from '@/lib/i18n';
+import { APP_NAME, dict, langs, languages, type Lang } from '@/lib/i18n';
 
 const NAV = [
   { href: '/', key: 'navTimes' },
@@ -14,8 +15,8 @@ export function TopBar({ lang, path }: { lang: Lang; path: string }) {
   return (
     <header className="mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-line pb-4">
       <Link href="/" className="flex items-center gap-2 text-lg font-semibold tracking-tight">
-        <span className="grid size-8 place-items-center rounded-full bg-noor/15 text-noor">☾</span>
-        Pray Tool
+        <Image src="/logo.png" alt="" width={32} height={32} className="rounded-lg" priority />
+        {APP_NAME}
       </Link>
       <nav className="order-3 flex w-full gap-1 overflow-x-auto text-sm sm:order-none sm:w-auto">
         {NAV.map((n) => (
