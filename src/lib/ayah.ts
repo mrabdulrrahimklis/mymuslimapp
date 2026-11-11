@@ -1,5 +1,5 @@
 import type { Ymd } from './dates';
-import { getAyahs } from './firestore';
+import { getAyahs } from './content';
 import type { Lang } from './i18n';
 
 /** Ayah counts of all 114 surahs (6236 in total). */

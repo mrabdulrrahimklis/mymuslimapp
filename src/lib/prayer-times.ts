@@ -1,6 +1,6 @@
 import { nearestCity } from './cities';
 import { addDays, todayIn, type Ymd } from './dates';
-import { getDoc } from './firestore';
+import { getDoc } from './content';
 import type { Method } from './methods';
 import { zonedIso } from './zoned';
 

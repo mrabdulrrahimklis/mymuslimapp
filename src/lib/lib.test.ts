@@ -90,21 +90,11 @@ describe('languages', async () => {
 });
 
 describe('firebase content', async () => {
-  const { decode } = await import('./firestore');
+  const { contentUrl } = await import('./content');
   const { parseHijri } = await import('./prayer-times');
   const { zonedIso } = await import('./zoned');
-  it('decodes Firestore REST values', () => {
-    expect(
-      decode({
-        mapValue: {
-          fields: {
-            n: { integerValue: '3' },
-            list: { arrayValue: { values: [{ stringValue: 'a' }, { booleanValue: true }] } },
-            empty: { arrayValue: {} },
-          },
-        },
-      }),
-    ).toEqual({ n: 3, list: ['a', true], empty: [] });
+  it('reads items from the Firebase Hosting content site', () => {
+    expect(contentUrl('content/events/langs/bs')).toBe('https://muslim-app-content.web.app/content/events/langs/bs.json');
   });
   it('reads Aladhan Hijri dates', () => {
     expect(parseHijri('30 Jumādá al-ūlá 1448')).toEqual({ day: 30, month: 5, year: 1448 });

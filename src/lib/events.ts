@@ -6,7 +6,7 @@ import id from '@/content/events.id.json';
 import tr from '@/content/events.tr.json';
 import ur from '@/content/events.ur.json';
 import { addDays, daysBetween, type Ymd } from './dates';
-import { getDoc } from './firestore';
+import { getDoc } from './content';
 import { fromHijri, toHijri } from './hijri';
 import type { Lang } from './i18n';
 
