@@ -16,6 +16,7 @@ export const ur: Dict = {
   near: (city) => `${city} کے قریب`,
   method: 'حساب کا طریقہ',
   methodAuto: 'خودکار (قریب ترین ادارہ)',
+  methodAutoShort: 'خودکار',
   save: 'محفوظ کریں',
   language: 'زبان',
   ayahOfDay: 'آج کی آیت',

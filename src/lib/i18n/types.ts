@@ -14,6 +14,8 @@ export type Dict = {
   near: (city: string) => string;
   method: string;
   methodAuto: string;
+  /** [methodAuto] short enough for the top bar. */
+  methodAutoShort: string;
   save: string;
   language: string;
   ayahOfDay: string;

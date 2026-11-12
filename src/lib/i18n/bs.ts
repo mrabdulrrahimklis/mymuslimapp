@@ -16,6 +16,7 @@ export const bs: Dict = {
   near: (city) => `blizu ${city}`,
   method: 'Metoda izračuna',
   methodAuto: 'Automatski (najbliži autoritet)',
+  methodAutoShort: 'Automatski',
   save: 'Sačuvaj',
   language: 'Jezik',
   ayahOfDay: 'Ajet dana',

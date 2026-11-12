@@ -24,6 +24,11 @@ export const languages = {
   ur: 'اردو',
 } as const;
 
+/** A flag for each language, shown next to its name. */
+export const langFlags = {
+  bs: '🇧🇦', en: '🇬🇧', ar: '🇸🇦', tr: '🇹🇷', id: '🇮🇩', fa: '🇮🇷', ur: '🇵🇰',
+} as const satisfies Record<keyof typeof languages, string>;
+
 export type Lang = keyof typeof languages;
 export const langs = Object.keys(languages) as Lang[];
 export const isLang = (v: unknown): v is Lang => typeof v === 'string' && v in languages;

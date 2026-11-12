@@ -16,6 +16,7 @@ export const en: Dict = {
   near: (city) => `near ${city}`,
   method: 'Calculation method',
   methodAuto: 'Automatic (nearest authority)',
+  methodAutoShort: 'Automatic',
   save: 'Save',
   language: 'Language',
   ayahOfDay: 'Ayah of the day',

@@ -14,7 +14,7 @@ export default async function LocationPage() {
   }));
   return (
     <>
-      <TopBar lang={lang} path="/location" />
+      <TopBar lang={lang} method={method} path="/location" />
       <h1 className="mb-5 text-3xl font-bold tracking-tight">{t.location}</h1>
       <div className="grid items-start gap-8 lg:grid-cols-[2fr_1fr]">
       <CityPicker

@@ -16,6 +16,7 @@ export const fa: Dict = {
   near: (city) => `نزدیک ${city}`,
   method: 'روش محاسبه',
   methodAuto: 'خودکار (نزدیک‌ترین مرجع)',
+  methodAutoShort: 'خودکار',
   save: 'ذخیره',
   language: 'زبان',
   ayahOfDay: 'آیهٔ روز',

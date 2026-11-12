@@ -24,15 +24,20 @@ export async function chooseCoordinates(lat: number, lng: number) {
   redirect('/');
 }
 
+/** The page a form came from (its `back` field), if it is one of ours. */
+function back(formData: FormData) {
+  const path = String(formData.get('back') ?? '/');
+  return ['/', '/location', '/events'].includes(path) ? path : '/';
+}
+
 export async function chooseMethod(formData: FormData) {
   const id = String(formData.get('method') ?? '');
   if (methods.some((m) => m.id === id)) await save(COOKIE.method, id);
-  redirect('/');
+  redirect(back(formData));
 }
 
 export async function chooseLang(formData: FormData) {
   const lang = formData.get('lang');
   if (isLang(lang)) await save(COOKIE.lang, lang);
-  const back = String(formData.get('back') ?? '/');
-  redirect(['/', '/location', '/events'].includes(back) ? back : '/');
+  redirect(back(formData));
 }

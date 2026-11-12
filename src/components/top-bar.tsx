@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { chooseLang } from '@/app/actions';
-import { APP_NAME, dict, langs, languages, type Lang } from '@/lib/i18n';
+import { chooseLang, chooseMethod } from '@/app/actions';
+import { Menu } from '@/components/menu';
+import { APP_NAME, dict, langFlags, langs, languages, type Lang } from '@/lib/i18n';
+import { methods, type Method } from '@/lib/methods';
 
 const NAV = [
   { href: '/', key: 'navTimes' },
@@ -9,8 +11,8 @@ const NAV = [
   { href: '/location', key: 'location' },
 ] as const;
 
-/** Brand, site navigation and the bs/en switch. */
-export function TopBar({ lang, path }: { lang: Lang; path: string }) {
+/** Brand, site navigation, and the calculation method and language menus. */
+export function TopBar({ lang, method, path }: { lang: Lang; method: Method; path: string }) {
   const t = dict[lang];
   return (
     <header className="mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-line pb-4">
@@ -30,34 +32,31 @@ export function TopBar({ lang, path }: { lang: Lang; path: string }) {
           </Link>
         ))}
       </nav>
-      <details className="group relative">
-        <summary
-          aria-label={t.language}
-          className="flex items-center gap-2 rounded-full border border-line px-3 py-1.5 text-sm hover:border-noor"
-        >
-          <span aria-hidden>🌐</span> {languages[lang]} <span className="text-mute group-open:rotate-180">▾</span>
-        </summary>
-        <form
+      <div className="flex items-center gap-2">
+        <Menu
+          label={t.method}
+          summary={<><span aria-hidden>🕋</span> {method.short || t.methodAutoShort}</>}
+          name="method"
+          items={methods.map((m) => ({ value: m.id, label: m.name || t.methodAuto }))}
+          current={method.id}
+          action={chooseMethod}
+          path={path}
+          wide
+        />
+        <Menu
+          label={t.language}
+          summary={<><span aria-hidden>{langFlags[lang]}</span> {languages[lang]}</>}
+          name="lang"
+          items={langs.map((l) => ({
+            value: l,
+            lang: l,
+            label: <><span aria-hidden className="me-2">{langFlags[l]}</span>{languages[l]}</>,
+          }))}
+          current={lang}
           action={chooseLang}
-          className="absolute end-0 z-20 mt-2 w-52 overflow-hidden rounded-2xl border border-line bg-panel p-1 shadow-2xl"
-        >
-          <input type="hidden" name="back" value={path} />
-          {langs.map((l) => (
-            <button
-              key={l}
-              name="lang"
-              value={l}
-              lang={l}
-              aria-pressed={l === lang}
-              className={`block w-full rounded-xl px-3 py-2 text-start text-sm ${
-                l === lang ? 'bg-noor/15 text-noor' : 'hover:bg-white/10'
-              }`}
-            >
-              {languages[l]}
-            </button>
-          ))}
-        </form>
-      </details>
+          path={path}
+        />
+      </div>
     </header>
   );
 }

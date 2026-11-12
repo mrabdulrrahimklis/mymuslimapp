@@ -16,6 +16,7 @@ export const tr: Dict = {
   near: (city) => `${city} yakını`,
   method: 'Hesaplama yöntemi',
   methodAuto: 'Otomatik (en yakın kurum)',
+  methodAutoShort: 'Otomatik',
   save: 'Kaydet',
   language: 'Dil',
   ayahOfDay: 'Günün ayeti',

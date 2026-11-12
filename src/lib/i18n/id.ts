@@ -16,6 +16,7 @@ export const id: Dict = {
   near: (city) => `dekat ${city}`,
   method: 'Metode perhitungan',
   methodAuto: 'Otomatis (otoritas terdekat)',
+  methodAutoShort: 'Otomatis',
   save: 'Simpan',
   language: 'Bahasa',
   ayahOfDay: 'Ayat hari ini',

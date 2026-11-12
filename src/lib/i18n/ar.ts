@@ -18,6 +18,7 @@ export const ar: Dict = {
   near: (city) => `قرب ${city}`,
   method: 'طريقة الحساب',
   methodAuto: 'تلقائي (أقرب جهة معتمدة)',
+  methodAutoShort: 'تلقائي',
   save: 'حفظ',
   language: 'اللغة',
   ayahOfDay: 'آية اليوم',

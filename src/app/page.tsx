@@ -21,7 +21,7 @@ export default async function Home() {
 
   return (
     <>
-      <TopBar lang={lang} path="/" />
+      <TopBar lang={lang} method={method} path="/" />
 
       <section className="mb-6 flex flex-wrap items-end justify-between gap-3">
         <div>
