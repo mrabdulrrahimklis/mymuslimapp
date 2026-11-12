@@ -1,4 +1,7 @@
 import { describe, expect, it } from 'vitest';
+import { periodOf } from './calendar';
+import { readPeriod } from './calendar-period';
+import { daysBetween } from './dates';
 import { dailyAyahKey, stripMarkup } from './ayah';
 import { parsePlace } from './settings';
 import { fromHijri, toHijri } from './hijri';
@@ -104,5 +107,23 @@ describe('firebase content', async () => {
     expect(zonedIso('2026-11-10', '05:29', 'Europe/Sarajevo')).toBe('2026-11-10T05:29:00+01:00');
     expect(zonedIso('2026-07-10', '03:05', 'Europe/Sarajevo')).toBe('2026-07-10T03:05:00+02:00');
     expect(zonedIso('2026-11-10', '06:10', 'America/New_York')).toBe('2026-11-10T06:10:00-05:00');
+  });
+});
+
+describe('calendar periods', () => {
+  it('finds Gregorian months and years', () => {
+    expect(periodOf('gregorian', 'month', '2026-02-14')).toEqual({ from: '2026-02-01', to: '2026-02-28' });
+    expect(periodOf('gregorian', 'year', '2026-11-12')).toEqual({ from: '2026-01-01', to: '2026-12-31' });
+  });
+  it('finds Hijri months and years (Umm al-Qura)', () => {
+    expect(periodOf('islamic', 'month', '2026-03-01')).toEqual({ from: '2026-02-18', to: '2026-03-19' }); // Ramadan 1447
+    const year = periodOf('islamic', 'year', '2026-11-12');
+    expect(toHijri(year.from)).toEqual({ year: 1448, month: 1, day: 1 });
+    expect(toHijri(year.to)).toMatchObject({ year: 1448, month: 12 });
+    expect(daysBetween(year.from, year.to) + 1).toBeGreaterThanOrEqual(354);
+  });
+  it('reads a period from the URL, else this month', () => {
+    expect(readPeriod('gregorian', { view: 'year', at: '2027-05-05' }, '2026-11-12').from).toBe('2027-01-01');
+    expect(readPeriod('gregorian', { view: 'x', at: 'nope' }, '2026-11-12')).toMatchObject({ view: 'month', from: '2026-11-01' });
   });
 });

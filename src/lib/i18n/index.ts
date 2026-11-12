@@ -64,12 +64,26 @@ const hijriMonthsEn = [
 
 /** "15 Sha'ban 1448" in [lang]; the other languages use ICU's Islamic month names. */
 export function hijriLabel(lang: Lang, day: number, month: number, year: number) {
-  if (lang === 'bs') return `${day}. ${hijriMonthsBs[month - 1]} ${year}. h.`;
-  if (lang === 'en') return `${day} ${hijriMonthsEn[month - 1]} ${year} AH`;
-  const name = islamicMonthName(lang, month);
-  const n = new Intl.NumberFormat(locales[lang], { useGrouping: false });
-  return `${n.format(day)} ${name} ${n.format(year)}`;
+  const d = lang === 'bs' ? `${day}.` : digits(lang, day);
+  return `${d} ${hijriMonthName(lang, month)} ${hijriYear(lang, year)}`;
 }
+
+/** "1448. h.", "1448 AH" or the year in [lang]'s digits. */
+export function hijriYear(lang: Lang, year: number) {
+  if (lang === 'bs') return `${year}. h.`;
+  if (lang === 'en') return `${year} AH`;
+  return digits(lang, year);
+}
+
+/** The name of Hijri month [month] (1–12) in [lang]. */
+export function hijriMonthName(lang: Lang, month: number) {
+  if (lang === 'bs') return hijriMonthsBs[month - 1];
+  if (lang === 'en') return hijriMonthsEn[month - 1];
+  return islamicMonthName(lang, month);
+}
+
+const digits = (lang: Lang, n: number) =>
+  new Intl.NumberFormat(locales[lang], { useGrouping: false }).format(n);
 
 const monthNameCache = new Map<string, string>();
 function islamicMonthName(lang: Lang, month: number) {

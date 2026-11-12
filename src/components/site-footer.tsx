@@ -26,6 +26,7 @@ export function SiteFooter({ lang }: { lang: Lang }) {
           <p className={heading}>{t.footerPages}</p>
           <ul className="space-y-2">
             <li><Link href="/" className={link}>{t.navTimes}</Link></li>
+            <li><Link href="/calendar" className={link}>{t.calendar}</Link></li>
             <li><Link href="/events" className={link}>{t.events}</Link></li>
             <li><Link href="/location" className={link}>{t.changeLocation}</Link></li>
           </ul>

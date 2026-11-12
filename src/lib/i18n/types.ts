@@ -37,4 +37,15 @@ export type Dict = {
   support: string;
   privacy: string;
   contact: string;
+  /** The calendar menu and page. */
+  calendar: string;
+  gregorian: string;
+  islamic: string;
+  month: string;
+  year: string;
+  previous: string;
+  next: string;
+  date: string;
+  downloadCsv: string;
+  printPdf: string;
 };

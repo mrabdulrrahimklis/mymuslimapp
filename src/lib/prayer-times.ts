@@ -120,3 +120,40 @@ async function fromAladhan(lat: number, lng: number, method: Method, now: Date):
   if (!todayDay) throw new Error(`no prayer times for ${today}`);
   return { timeZone: timeZone!, today: todayDay, tomorrow: await find(tomorrow).catch(() => null) };
 }
+
+// ── A whole month or year, for the calendar page and its download ──
+
+/** One day of the calendar: each prayer as local "HH:MM". */
+export type CalendarDay = { date: Ymd; times: Record<PrayerKey, string> };
+
+/** Every Gregorian year (or `YYYY-MM` month) touched by [from]…[to]. */
+function spanned(from: Ymd, to: Ymd, length: 4 | 7) {
+  const keys: string[] = [];
+  for (let d = from; d <= to; d = addDays(d, 1)) {
+    const k = d.slice(0, length);
+    if (keys.at(-1) !== k) keys.push(k);
+  }
+  return keys;
+}
+
+/** Prayer times for every day from [from] to [to]: Firebase for the app's cities, else Aladhan. */
+export async function loadDays(lat: number, lng: number, method: Method, from: Ymd, to: Ymd): Promise<CalendarDay[]> {
+  const inRange = (d: CalendarDay) => d.date >= from && d.date <= to;
+  const city = nearestCity(lat, lng);
+  if (Math.abs(city.lat - lat) < MAX_DRIFT && Math.abs(city.lng - lng) < MAX_DRIFT) {
+    const years = await Promise.all(spanned(from, to, 4).map((y) =>
+      getDoc<StoredYear>(`content/prayerTimes/cities/${city.id}/methods/${method.id}/years/${y}`)));
+    if (years.every(Boolean)) {
+      const days = years.flatMap((y) => y!.days).map((d) => ({
+        date: d.date,
+        times: Object.fromEntries(PRAYERS.map((p) => [p, d.times[p.toLowerCase()]])) as CalendarDay['times'],
+      }));
+      return days.filter(inRange);
+    }
+  }
+  const months = await Promise.all(spanned(from, to, 7).map((m) => fetchMonth(+m.slice(0, 4), +m.slice(5, 7), lat, lng, method)));
+  return months.flat().map(toDay).map((d) => ({
+    date: d.date,
+    times: Object.fromEntries(PRAYERS.map((p) => [p, d.times[p].slice(11, 16)])) as CalendarDay['times'],
+  })).filter(inRange);
+}

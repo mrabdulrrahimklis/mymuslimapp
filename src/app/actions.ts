@@ -2,6 +2,7 @@
 
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
+import { isCalendar } from '@/lib/calendar';
 import { cityById } from '@/lib/cities';
 import { isLang } from '@/lib/i18n';
 import { methods } from '@/lib/methods';
@@ -24,16 +25,27 @@ export async function chooseCoordinates(lat: number, lng: number) {
   redirect('/');
 }
 
-/** The page a form came from (its `back` field), if it is one of ours. */
-function back(formData: FormData) {
-  const path = String(formData.get('back') ?? '/');
-  return ['/', '/location', '/events'].includes(path) ? path : '/';
+/** The page a form came from (its `back` field, query included), if it is one of ours. */
+function backPath(back: unknown) {
+  const path = String(back ?? '/');
+  const [page, query] = path.split('?');
+  const ok = ['/', '/location', '/events', '/calendar'].includes(page) && (query === undefined || /^[\w=&-]*$/.test(query));
+  return ok ? path : '/';
 }
+const back = (formData: FormData) => backPath(formData.get('back'));
 
 export async function chooseMethod(formData: FormData) {
   const id = String(formData.get('method') ?? '');
   if (methods.some((m) => m.id === id)) await save(COOKIE.method, id);
   redirect(back(formData));
+}
+
+export async function chooseCalendar(formData: FormData) {
+  const calendar = formData.get('calendar');
+  if (isCalendar(calendar)) await save(COOKIE.calendar, calendar);
+  // A month or year of the old calendar means nothing in the new one.
+  const path = back(formData);
+  redirect(path.startsWith('/calendar') ? `/calendar?view=${new URLSearchParams(path.split('?')[1]).get('view') === 'year' ? 'year' : 'month'}` : path);
 }
 
 export async function chooseLang(formData: FormData) {

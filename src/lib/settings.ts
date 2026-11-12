@@ -1,11 +1,13 @@
 import { cookies, headers } from 'next/headers';
+import { isCalendar, type CalendarId } from './calendar';
 import { cityById, cityName, nearestCity } from './cities';
 import { isLang, langFromHeader, type Lang } from './i18n';
 import { methodById, type Method } from './methods';
 
-export const COOKIE = { loc: 'pt_loc', lang: 'pt_lang', method: 'pt_method' } as const;
+export const COOKIE = { loc: 'pt_loc', lang: 'pt_lang', method: 'pt_method', calendar: 'pt_cal' } as const;
 export const COOKIE_OPTIONS = {
-  maxAge: 60 * 60 * 24 * 365,
+  // Browsers keep a cookie 400 days at most; it is set again only when the visitor changes it.
+  maxAge: 60 * 60 * 24 * 400,
   sameSite: 'lax' as const,
   path: '/',
   httpOnly: true,
@@ -13,7 +15,7 @@ export const COOKIE_OPTIONS = {
 };
 
 export type Place = { label: string; lat: number; lng: number; cityId?: string; nearby: boolean };
-export type Settings = { lang: Lang; method: Method; place: Place };
+export type Settings = { lang: Lang; method: Method; calendar: CalendarId; place: Place };
 
 const DEFAULT_CITY = 'sarajevo';
 
@@ -35,10 +37,12 @@ export function parsePlace(raw: string | undefined, lang: Lang): Place {
 export async function readSettings(): Promise<Settings> {
   const jar = await cookies();
   const saved = jar.get(COOKIE.lang)?.value;
+  const calendar = jar.get(COOKIE.calendar)?.value;
   const lang = isLang(saved) ? saved : langFromHeader((await headers()).get('accept-language'));
   return {
     lang,
     method: methodById(jar.get(COOKIE.method)?.value),
+    calendar: isCalendar(calendar) ? calendar : 'gregorian',
     place: parsePlace(jar.get(COOKIE.loc)?.value, lang),
   };
 }

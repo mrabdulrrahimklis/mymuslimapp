@@ -1,18 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { chooseLang, chooseMethod } from '@/app/actions';
+import { chooseCalendar, chooseLang, chooseMethod } from '@/app/actions';
 import { Menu } from '@/components/menu';
 import { APP_NAME, dict, langFlags, langs, languages, type Lang } from '@/lib/i18n';
+import { calendars, type CalendarId } from '@/lib/calendar';
 import { methods, type Method } from '@/lib/methods';
 
 const NAV = [
   { href: '/', key: 'navTimes' },
+  { href: '/calendar', key: 'calendar' },
   { href: '/events', key: 'events' },
   { href: '/location', key: 'location' },
 ] as const;
 
-/** Brand, site navigation, and the calculation method and language menus. */
-export function TopBar({ lang, method, path }: { lang: Lang; method: Method; path: string }) {
+/** Brand, site navigation, and the calendar, calculation method and language menus. */
+export function TopBar({ lang, method, calendar, path }: { lang: Lang; method: Method; calendar: CalendarId; path: string }) {
+  const page = path.split('?')[0];
   const t = dict[lang];
   return (
     <header className="mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-line pb-4">
@@ -25,14 +28,23 @@ export function TopBar({ lang, method, path }: { lang: Lang; method: Method; pat
           <Link
             key={n.href}
             href={n.href}
-            aria-current={n.href === path ? 'page' : undefined}
-            className={`rounded-full px-4 py-1.5 ${n.href === path ? 'bg-white/10 text-white' : 'text-mute hover:text-white'}`}
+            aria-current={n.href === page ? 'page' : undefined}
+            className={`rounded-full px-4 py-1.5 ${n.href === page ? 'bg-white/10 text-white' : 'text-mute hover:text-white'}`}
           >
             {t[n.key]}
           </Link>
         ))}
       </nav>
-      <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center gap-2">
+        <Menu
+          label={t.calendar}
+          summary={<><span aria-hidden>📅</span> {t[calendar]}</>}
+          name="calendar"
+          items={calendars.map((c) => ({ value: c, label: t[c] }))}
+          current={calendar}
+          action={chooseCalendar}
+          path={path}
+        />
         <Menu
           label={t.method}
           summary={<><span aria-hidden>🕋</span> {method.short || t.methodAutoShort}</>}

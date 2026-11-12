@@ -21,3 +21,14 @@ body {
 }
 details > summary { list-style: none; cursor: pointer; }
 details > summary::-webkit-details-marker { display: none; }
+
+/* The calendar page printed (or saved as PDF): black on white, without the site around it. */
+@media print {
+  @page { margin: 12mm; }
+  html { color-scheme: light; }
+  body { background: #fff; color: #000; }
+  footer { display: none; }
+  table { font-size: 10pt; }
+  thead { background: #eee !important; color: #000 !important; }
+  tr[aria-current='date'] { background: none !important; color: inherit !important; }
+}

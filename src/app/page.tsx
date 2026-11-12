@@ -9,7 +9,7 @@ import { loadVaktija, PRAYERS } from '@/lib/prayer-times';
 import { readSettings } from '@/lib/settings';
 
 export default async function Home() {
-  const { lang, method, place } = await readSettings();
+  const { lang, method, calendar, place } = await readSettings();
   const t = dict[lang];
   const vaktija = await loadVaktija(place.lat, place.lng, method).catch(() => null);
   const today = vaktija?.today.date ?? todayIn('Europe/Sarajevo');
@@ -21,19 +21,22 @@ export default async function Home() {
 
   return (
     <>
-      <TopBar lang={lang} method={method} path="/" />
+      <TopBar lang={lang} method={method} calendar={calendar} path="/" />
 
       <section className="mb-6 flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
             {flag(city.country)} {place.nearby ? t.near(place.label) : place.label}
           </h1>
-          <p className="mt-1 text-mute first-letter:uppercase">{dateText}</p>
-          {vaktija && (
-            <p className="text-gold">
-              {hijriLabel(lang, vaktija.today.hijri.day, vaktija.today.hijri.month, vaktija.today.hijri.year)}
-            </p>
-          )}
+          {/* The chosen calendar's date first. */}
+          <div className={`mt-1 flex ${calendar === 'islamic' ? 'flex-col-reverse' : 'flex-col'}`}>
+            <p className="text-mute first-letter:uppercase">{dateText}</p>
+            {vaktija && (
+              <p className="text-gold">
+                {hijriLabel(lang, vaktija.today.hijri.day, vaktija.today.hijri.month, vaktija.today.hijri.year)}
+              </p>
+            )}
+          </div>
         </div>
         <Link href="/location" className="rounded-full bg-white/10 px-4 py-2 text-sm hover:bg-white/15">
           📍 {t.changeLocation}

@@ -7,14 +7,14 @@ import { methods } from '@/lib/methods';
 import { readSettings } from '@/lib/settings';
 
 export default async function LocationPage() {
-  const { lang, method, place } = await readSettings();
+  const { lang, method, calendar, place } = await readSettings();
   const t = dict[lang];
   const options = cities.map((c) => ({
     id: c.id, label: cityName(c, lang), alt: c.name, flag: flag(c.country), country: c.country,
   }));
   return (
     <>
-      <TopBar lang={lang} method={method} path="/location" />
+      <TopBar lang={lang} method={method} calendar={calendar} path="/location" />
       <h1 className="mb-5 text-3xl font-bold tracking-tight">{t.location}</h1>
       <div className="grid items-start gap-8 lg:grid-cols-[2fr_1fr]">
       <CityPicker
