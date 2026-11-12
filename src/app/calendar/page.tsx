@@ -73,12 +73,12 @@ export default async function CalendarPage({ searchParams }: { searchParams: Sea
           <section key={g.from} className="mb-8 break-inside-avoid-page">
             {view === 'year' && <h2 className="mb-2 text-xl font-semibold">{periodLabel(lang, calendar, 'month', g.from)}</h2>}
             <div className="overflow-x-auto rounded-2xl border border-line print:overflow-visible print:rounded-none">
-              <table className="w-full text-sm tabular-nums">
+              <table className="w-full text-xs tabular-nums sm:text-sm">
                 <thead className="bg-panel text-mute">
                   <tr>
-                    <th className="px-3 py-2 text-start font-semibold">{t.date}</th>
-                    <th className="px-3 py-2 text-start font-semibold">{t[other]}</th>
-                    {t.prayers.map((p) => <th key={p} className="px-3 py-2 text-end font-semibold">{p}</th>)}
+                    <th className="px-2 py-2 text-start font-semibold sm:px-3">{t.date}</th>
+                    <th className="hidden px-3 py-2 text-start font-semibold sm:table-cell">{t[other]}</th>
+                    {t.prayers.map((p) => <th key={p} className="px-1.5 py-2 text-end font-semibold sm:px-3">{p}</th>)}
                   </tr>
                 </thead>
                 <tbody>
@@ -88,12 +88,12 @@ export default async function CalendarPage({ searchParams }: { searchParams: Sea
                       aria-current={d.date === today ? 'date' : undefined}
                       className={`border-t border-line ${d.date === today ? 'bg-noor/15 text-noor' : ''}`}
                     >
-                      <td className="whitespace-nowrap px-3 py-1.5">
-                        <span className="inline-block w-7 font-semibold">{partsIn(calendar, d.date).day}</span>
+                      <td className="whitespace-nowrap px-2 py-1.5 sm:px-3">
+                        <span className="inline-block w-6 font-semibold sm:w-7">{partsIn(calendar, d.date).day}</span>
                         <span className="text-mute">{weekday(lang, d.date)}</span>
                       </td>
-                      <td className="whitespace-nowrap px-3 py-1.5 text-mute">{dayLabel(lang, other, d.date)}</td>
-                      {PRAYERS.map((p) => <td key={p} className="px-3 py-1.5 text-end">{d.times[p]}</td>)}
+                      <td className="hidden whitespace-nowrap px-3 py-1.5 text-mute sm:table-cell">{dayLabel(lang, other, d.date)}</td>
+                      {PRAYERS.map((p) => <td key={p} className="px-1.5 py-1.5 text-end sm:px-3">{d.times[p]}</td>)}
                     </tr>
                   ))}
                 </tbody>

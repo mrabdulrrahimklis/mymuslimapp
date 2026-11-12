@@ -55,4 +55,7 @@ export const ar: Dict = {
   date: 'التاريخ',
   downloadCsv: 'تنزيل (Excel/CSV)',
   printPdf: 'طباعة / PDF',
+  scanToInstall: 'امسح الرمز للتثبيت على هاتفك',
+  menu: 'القائمة',
+  close: 'إغلاق',
 };

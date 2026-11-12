@@ -48,4 +48,7 @@ export const bs: Dict = {
   date: 'Datum',
   downloadCsv: 'Preuzmi (Excel/CSV)',
   printPdf: 'Štampaj / PDF',
+  scanToInstall: 'Skeniraj za instalaciju na telefonu',
+  menu: 'Meni',
+  close: 'Zatvori',
 };

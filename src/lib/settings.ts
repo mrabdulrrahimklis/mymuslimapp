@@ -15,7 +15,8 @@ export const COOKIE_OPTIONS = {
 };
 
 export type Place = { label: string; lat: number; lng: number; cityId?: string; nearby: boolean };
-export type Settings = { lang: Lang; method: Method; calendar: CalendarId; place: Place };
+/** [locationSaved]: the visitor has picked a place (else it is the default city). */
+export type Settings = { lang: Lang; method: Method; calendar: CalendarId; place: Place; locationSaved: boolean };
 
 const DEFAULT_CITY = 'sarajevo';
 
@@ -44,5 +45,6 @@ export async function readSettings(): Promise<Settings> {
     method: methodById(jar.get(COOKIE.method)?.value),
     calendar: isCalendar(calendar) ? calendar : 'gregorian',
     place: parsePlace(jar.get(COOKIE.loc)?.value, lang),
+    locationSaved: jar.has(COOKIE.loc),
   };
 }

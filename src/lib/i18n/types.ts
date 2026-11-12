@@ -48,4 +48,9 @@ export type Dict = {
   date: string;
   downloadCsv: string;
   printPdf: string;
+  /** Next to the QR code for the app. */
+  scanToInstall: string;
+  /** The mobile menu's button and its close button. */
+  menu: string;
+  close: string;
 };

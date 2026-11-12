@@ -48,4 +48,7 @@ export const id: Dict = {
   date: 'Tanggal',
   downloadCsv: 'Unduh (Excel/CSV)',
   printPdf: 'Cetak / PDF',
+  scanToInstall: 'Pindai untuk memasang di ponsel',
+  menu: 'Menu',
+  close: 'Tutup',
 };

@@ -48,4 +48,7 @@ export const fa: Dict = {
   date: 'تاریخ',
   downloadCsv: 'دانلود (Excel/CSV)',
   printPdf: 'چاپ / PDF',
+  scanToInstall: 'برای نصب روی گوشی اسکن کنید',
+  menu: 'منو',
+  close: 'بستن',
 };

@@ -48,4 +48,7 @@ export const en: Dict = {
   date: 'Date',
   downloadCsv: 'Download (Excel/CSV)',
   printPdf: 'Print / PDF',
+  scanToInstall: 'Scan to install on your phone',
+  menu: 'Menu',
+  close: 'Close',
 };

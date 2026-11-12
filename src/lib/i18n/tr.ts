@@ -48,4 +48,7 @@ export const tr: Dict = {
   date: 'Tarih',
   downloadCsv: 'İndir (Excel/CSV)',
   printPdf: 'Yazdır / PDF',
+  scanToInstall: 'Telefonuna yüklemek için tara',
+  menu: 'Menü',
+  close: 'Kapat',
 };

@@ -48,4 +48,7 @@ export const ur: Dict = {
   date: 'تاریخ',
   downloadCsv: 'ڈاؤن لوڈ (Excel/CSV)',
   printPdf: 'پرنٹ / PDF',
+  scanToInstall: 'فون پر انسٹال کرنے کے لیے اسکین کریں',
+  menu: 'مینو',
+  close: 'بند کریں',
 };
