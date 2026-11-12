@@ -15,7 +15,6 @@ export const ar: Dict = {
   useMyLocation: 'استخدم موقعي',
   locating: 'جارٍ تحديد موقعك…',
   locationDenied: 'الموقع غير متاح. اختر مدينة من القائمة.',
-  near: (city) => `قرب ${city}`,
   method: 'طريقة الحساب',
   methodAuto: 'تلقائي (أقرب جهة معتمدة)',
   methodAutoShort: 'تلقائي',

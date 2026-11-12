@@ -13,7 +13,6 @@ export const ur: Dict = {
   useMyLocation: 'میرا مقام استعمال کریں',
   locating: 'آپ کا مقام تلاش ہو رہا ہے…',
   locationDenied: 'مقام دستیاب نہیں۔ فہرست سے شہر منتخب کریں۔',
-  near: (city) => `${city} کے قریب`,
   method: 'حساب کا طریقہ',
   methodAuto: 'خودکار (قریب ترین ادارہ)',
   methodAutoShort: 'خودکار',

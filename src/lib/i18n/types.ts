@@ -11,7 +11,6 @@ export type Dict = {
   useMyLocation: string;
   locating: string;
   locationDenied: string;
-  near: (city: string) => string;
   method: string;
   methodAuto: string;
   /** [methodAuto] short enough for the top bar. */

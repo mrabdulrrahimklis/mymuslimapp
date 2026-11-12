@@ -37,7 +37,7 @@ export default async function CalendarPage({ searchParams }: { searchParams: Sea
         <div>
           <h1 className="text-3xl font-bold tracking-tight">{periodLabel(lang, calendar, view, from)}</h1>
           <p className="mt-1 text-mute">
-            {flag(city.country)} {place.nearby ? t.near(place.label) : place.label} · {method.name || t.methodAuto}
+            {flag(city.country)} {place.label} · {method.name || t.methodAuto}
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2 text-sm print:hidden">
@@ -76,9 +76,9 @@ export default async function CalendarPage({ searchParams }: { searchParams: Sea
               <table className="w-full text-xs tabular-nums sm:text-sm">
                 <thead className="bg-panel text-mute">
                   <tr>
-                    <th className="px-2 py-2 text-start font-semibold sm:px-3">{t.date}</th>
+                    <th className="px-1.5 py-2 text-start font-semibold sm:px-3">{t.date}</th>
                     <th className="hidden px-3 py-2 text-start font-semibold sm:table-cell">{t[other]}</th>
-                    {t.prayers.map((p) => <th key={p} className="px-1.5 py-2 text-end font-semibold sm:px-3">{p}</th>)}
+                    {t.prayers.map((p) => <th key={p} className="px-1 py-2 text-end font-semibold sm:px-3">{p}</th>)}
                   </tr>
                 </thead>
                 <tbody>
@@ -88,12 +88,12 @@ export default async function CalendarPage({ searchParams }: { searchParams: Sea
                       aria-current={d.date === today ? 'date' : undefined}
                       className={`border-t border-line ${d.date === today ? 'bg-noor/15 text-noor' : ''}`}
                     >
-                      <td className="whitespace-nowrap px-2 py-1.5 sm:px-3">
-                        <span className="inline-block w-6 font-semibold sm:w-7">{partsIn(calendar, d.date).day}</span>
+                      <td className="whitespace-nowrap px-1.5 py-1.5 sm:px-3">
+                        <span className="inline-block w-5 font-semibold sm:w-7">{partsIn(calendar, d.date).day}</span>
                         <span className="text-mute">{weekday(lang, d.date)}</span>
                       </td>
                       <td className="hidden whitespace-nowrap px-3 py-1.5 text-mute sm:table-cell">{dayLabel(lang, other, d.date)}</td>
-                      {PRAYERS.map((p) => <td key={p} className="px-1.5 py-1.5 text-end sm:px-3">{d.times[p]}</td>)}
+                      {PRAYERS.map((p) => <td key={p} className="px-1 py-1.5 text-end sm:px-3">{d.times[p]}</td>)}
                     </tr>
                   ))}
                 </tbody>

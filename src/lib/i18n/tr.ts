@@ -13,7 +13,6 @@ export const tr: Dict = {
   useMyLocation: 'Konumumu kullan',
   locating: 'Konum bulunuyor…',
   locationDenied: 'Konum alınamadı. Listeden bir şehir seçin.',
-  near: (city) => `${city} yakını`,
   method: 'Hesaplama yöntemi',
   methodAuto: 'Otomatik (en yakın kurum)',
   methodAutoShort: 'Otomatik',

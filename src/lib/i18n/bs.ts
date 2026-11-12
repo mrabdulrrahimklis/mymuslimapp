@@ -13,7 +13,6 @@ export const bs: Dict = {
   useMyLocation: 'Koristi moju lokaciju',
   locating: 'Tražim lokaciju…',
   locationDenied: 'Lokacija nije dostupna. Izaberi grad s liste.',
-  near: (city) => `blizu ${city}`,
   method: 'Metoda izračuna',
   methodAuto: 'Automatski (najbliži autoritet)',
   methodAutoShort: 'Automatski',

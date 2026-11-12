@@ -13,7 +13,6 @@ export const id: Dict = {
   useMyLocation: 'Gunakan lokasi saya',
   locating: 'Mencari lokasi…',
   locationDenied: 'Lokasi tidak tersedia. Pilih kota dari daftar.',
-  near: (city) => `dekat ${city}`,
   method: 'Metode perhitungan',
   methodAuto: 'Otomatis (otoritas terdekat)',
   methodAutoShort: 'Otomatis',

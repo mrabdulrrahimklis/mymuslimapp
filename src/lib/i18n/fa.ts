@@ -13,7 +13,6 @@ export const fa: Dict = {
   useMyLocation: 'استفاده از موقعیت من',
   locating: 'در حال یافتن موقعیت…',
   locationDenied: 'موقعیت در دسترس نیست. یک شهر از فهرست انتخاب کنید.',
-  near: (city) => `نزدیک ${city}`,
   method: 'روش محاسبه',
   methodAuto: 'خودکار (نزدیک‌ترین مرجع)',
   methodAutoShort: 'خودکار',

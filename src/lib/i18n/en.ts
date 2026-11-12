@@ -13,7 +13,6 @@ export const en: Dict = {
   useMyLocation: 'Use my location',
   locating: 'Finding your location…',
   locationDenied: 'Location unavailable. Pick a city from the list.',
-  near: (city) => `near ${city}`,
   method: 'Calculation method',
   methodAuto: 'Automatic (nearest authority)',
   methodAutoShort: 'Automatic',

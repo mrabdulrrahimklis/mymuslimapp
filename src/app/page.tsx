@@ -28,7 +28,7 @@ export default async function Home() {
       <section className="mb-6">
         <div>
           <h1 className="flex flex-wrap items-center gap-x-3 text-3xl font-bold tracking-tight sm:text-4xl">
-            <span>{flag(city.country)} {place.nearby ? t.near(place.label) : place.label}</span>
+            <span>{flag(city.country)} {place.label}</span>
             <Link
               href="/location"
               aria-label={t.changeLocation}
