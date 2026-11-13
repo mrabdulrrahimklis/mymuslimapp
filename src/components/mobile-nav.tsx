@@ -39,7 +39,7 @@ export function MobileNav({ label, closeLabel, children }: { label: string; clos
           onClick={() => setOpen(false)}
           className={`absolute inset-0 bg-black/60 transition-opacity ${open ? 'opacity-100' : 'opacity-0'}`}
         />
-        <aside
+        <div
           role="dialog"
           aria-modal="true"
           aria-label={label}
@@ -60,7 +60,7 @@ export function MobileNav({ label, closeLabel, children }: { label: string; clos
             </svg>
           </button>
           {children}
-        </aside>
+        </div>
       </div>
     </>
   );

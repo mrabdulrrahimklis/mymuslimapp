@@ -6,8 +6,10 @@ import { SiteFooter } from '@/components/site-footer';
 import './globals.css';
 
 const manrope = Manrope({ subsets: ['latin', 'latin-ext'], variable: '--font-manrope' });
-const vazir = Vazirmatn({ subsets: ['arabic'], variable: '--font-vazir' });
-const amiri = Amiri({ subsets: ['arabic'], weight: ['400', '700'], variable: '--font-amiri' });
+// The Arabic-script fonts (~200 KB) are not preloaded: most pages are Latin, and
+// preloading them held back the first paint on slow phones. They load when used.
+const vazir = Vazirmatn({ subsets: ['arabic'], variable: '--font-vazir', preload: false });
+const amiri = Amiri({ subsets: ['arabic'], weight: '400', variable: '--font-amiri', preload: false });
 
 export async function generateMetadata(): Promise<Metadata> {
   const { lang } = await readSettings();

@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import { Suspense } from 'react';
 import { AutoLocate } from '@/components/auto-locate';
 import { PrayerBoard } from '@/components/prayer-board';
 import { TopBar } from '@/components/top-bar';
 import { loadAyah } from '@/lib/ayah';
 import { flag, cityById, nearestCity } from '@/lib/cities';
 import { todayIn, ymdToUtc } from '@/lib/dates';
-import { dict, hijriLabel, locale } from '@/lib/i18n';
+import { dict, hijriLabel, locale, type Lang } from '@/lib/i18n';
 import { loadVaktija, PRAYERS } from '@/lib/prayer-times';
 import { readSettings } from '@/lib/settings';
 
@@ -14,7 +15,6 @@ export default async function Home() {
   const t = dict[lang];
   const vaktija = await loadVaktija(place.lat, place.lng, method).catch(() => null);
   const today = vaktija?.today.date ?? todayIn('Europe/Sarajevo');
-  const ayah = await loadAyah(today, lang).catch(() => null);
   const city = place.cityId ? cityById(place.cityId)! : nearestCity(place.lat, place.lng);
   const dateText = new Intl.DateTimeFormat(locale(lang), {
     weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC', calendar: 'gregory',
@@ -68,16 +68,26 @@ export default async function Home() {
         </div>
 
         <div>
-          {ayah && (
-            <section className="rounded-3xl border border-gold/25 bg-gradient-to-b from-gold/10 to-transparent p-6">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">{t.ayahOfDay}</h2>
-              <p dir="rtl" lang="ar" className="mt-4 font-arabic text-3xl leading-[2.1]">{ayah.arabic}</p>
-              {ayah.translation && <p className="mt-4 text-lg leading-relaxed text-white/90">{ayah.translation}</p>}
-              <p className="mt-3 text-sm text-mute">{t.quran} {ayah.key}</p>
-            </section>
-          )}
+          {/* Streamed in after the prayer times, so they never wait for quran.com. */}
+          <Suspense>
+            <AyahOfDay today={today} lang={lang} />
+          </Suspense>
         </div>
       </div>
     </>
+  );
+}
+
+async function AyahOfDay({ today, lang }: { today: string; lang: Lang }) {
+  const ayah = await loadAyah(today, lang).catch(() => null);
+  if (!ayah) return null;
+  const t = dict[lang];
+  return (
+    <section className="rounded-3xl border border-gold/25 bg-gradient-to-b from-gold/10 to-transparent p-6">
+      <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">{t.ayahOfDay}</h2>
+      <p dir="rtl" lang="ar" className="mt-4 font-arabic text-3xl leading-[2.1]">{ayah.arabic}</p>
+      {ayah.translation && <p className="mt-4 text-lg leading-relaxed text-white/90">{ayah.translation}</p>}
+      <p className="mt-3 text-sm text-mute">{t.quran} {ayah.key}</p>
+    </section>
   );
 }
