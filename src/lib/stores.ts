@@ -1,5 +1,5 @@
 /** Where the mobile app is installed from. */
-export const APP_STORE_URL = 'https://apps.apple.com/app/id6830848746';
+export const APP_STORE_URL = 'https://apps.apple.com/app/muslim-app-prayer-quran/id6830848746';
 export const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.amygdal.pray_tool';
 
 /** The store for the device in [userAgent], or null for a computer. */
